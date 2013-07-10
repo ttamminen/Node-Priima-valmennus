@@ -1,0 +1,44 @@
+nav.main {
+	@extend .navbar;
+	@extend .navbar-fixed-top;
+}
+
+nav.main > div {
+	@extend .navbar-inner;
+	@include override_gradient_vertical();
+	@include no-box-shadow();
+	@include no-borders();
+	padding-right: 0px;
+
+	.brand {
+		width: 163px;
+		height: 77px;
+		background-image: url(/images/logo.png);
+		background-repeat: no-repeat;
+		padding: 0px;
+		margin-top: 13px;
+		padding-right: 20px;
+	}
+}
+
+nav.main > div > ul {
+	@extend .nav;
+	float: right;
+}
+
+nav.main > div > ul > li {
+	a {
+		padding-top: 73px;
+		padding-bottom: 4px;
+		text-shadow: none;
+	}
+
+	/* remove box shadow from active li links */
+	&.active, &.active:hover {
+		a {
+			@include no-box-shadow();
+			background-color: $pmDarkGray;
+			color: $pmGray;
+		}
+	}
+}

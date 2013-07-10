@@ -1,0 +1,185 @@
+@font-face {
+  	font-family: 'Helvetica Neue';
+  	src: url('/fonts/otf/HelveticaNeueLTStd-Th.otf?') format('eot'), url('/fonts/woff/HelveticaNeueLTStd-Th.woff') format('woff'), url('/fonts/ttf/HelveticaNeueLTStd-Th.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'MetaProBook';
+	src: url('/fonts/otf/MetaPro-BookItalic.otf?') format('eot'), url('/fonts/woff/MetaPro-BookItalic.woff') format('woff'), url('/fonts/ttf/MetaPro-BookItalic.ttf') format('truetype');
+	font-style: italic, oblique;
+}
+
+@font-face {
+  	font-family: 'MetaProBook';
+  	src: url('/fonts/otf/MetaPro-Book.otf?') format('eot'), url('/fonts/woff/MetaPro-Book.woff') format('woff'), url('/fonts/ttf/MetaPro-Book.ttf') format('truetype');
+  	font-style: normal;
+}
+
+@font-face {
+  	font-family: 'MetaProMedium';
+  	src: url('/fonts/otf/MetaPro-Medium.otf?') format('eot'), url('/fonts/woff/MetaPro-Medium.woff') format('woff'), url('/fonts/ttf/MetaPro-Medium.ttf') format('truetype');
+}
+
+@import "compass_twitter_bootstrap";
+@import "compass/utilities";
+
+$icons-sprite-dimensions: true;
+@import 'icons/*.png';
+@include all-icons-sprites;
+
+//@import "compass_twitter_bootstrap_responsive";
+@import "mixins";
+@import "navigation2";
+@import "typography";
+@import "infobox";
+@import "spinner";
+
+html {
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	background: $bodyBackgroundImage;
+	padding-top: 115px;
+}
+
+input[type=text],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=email],
+textarea {
+	@include border-radius(15px);
+}
+
+/* header */
+header.site {
+	@extend .container;
+}
+
+.hidden {
+	display: none;
+}
+
+.error {
+	color: $errorColor;
+}
+
+.price {
+	color: $pmPink;
+}
+
+/* content */
+.page-content {
+	@extend .container;
+	padding-bottom: $distanceFromDivider;
+	padding-top: $distanceFromDivider;
+	border-bottom: $dividerStyle;
+}
+
+.infobox {
+	@include infobox($pmWhite, $pmWhite, $infoboxPadding);
+}
+
+.info-area-wrapper {
+	@include info-container($pmWhite, $pmWhite);
+	float: left;
+	padding-bottom: $distanceFromEdgeOfInfobox - 10;
+
+	p {
+		font-size: 18px;
+		line-height: 1.7;
+	}
+
+	h2 {
+		color: $pmPink;
+		text-transform: uppercase;
+		line-height: 1.25;
+		font-size: $h1HeaderFontSize;
+	}
+
+	h2 > span {
+		color: $pmMediumGray;
+		text-transform: none;
+	}
+
+	h3 {
+		line-height: 1;
+	}
+
+	h3 > span {
+		font-size: 16px;
+	}
+
+	> div > div:first-child, > nav > div:first-child {
+		margin-top: $distanceFromEdgeOfInfobox - 10;
+		margin-left: $distanceFromEdgeOfInfobox;
+	}
+
+	> div > div {
+		margin-top: $distanceFromEdgeOfInfobox - 10;
+	}
+}
+
+.read-more {
+	@extend .icons-read-more;
+	border: 0;
+}
+
+/* containers child div is always a row */
+.page-content > div {
+	@extend .row-fluid;
+}
+
+.page-content > div {
+	> div,
+	> article,
+	> aside {
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+	}
+}
+
+.page-content > header {
+	@include makeColumn(12);
+	background-color: $pmDarkGray;
+	margin-left: 0px;
+	margin-bottom: 44px
+}
+
+.page-content > header > h1, .page-content > header > h2 {
+	font-size: $h1HeaderFontSize - 1;
+	color: $pmLightBlue;
+	margin-left: 14px;
+	margin-right: 14px;
+	margin-top: 24px;
+	margin-bottom: 23px;
+	text-transform: uppercase;
+}
+
+
+/* main page */
+#main-page {
+	@import 'mainpage';
+}
+
+/* Priima-valmennus */
+#priima-valmennus {
+	@import 'priimavalmennus';
+}
+
+/* services for individuals */
+#services-for-individuals {
+	@import 'individuals';
+}
+
+/* services for companies */
+#services-for-companies {
+	@import 'companies';
+}
+
+/* contact */
+#contact {
+	@import 'contact';
+}

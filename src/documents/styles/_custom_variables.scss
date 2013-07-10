@@ -1,0 +1,62 @@
+$assetsPath: '/images/';
+
+// Default 1112px grid
+// -------------------------
+$gridColumns:             12;
+$gridColumnWidth:         93px;
+$gridGutterWidth:         0px; // 20px
+$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+
+// 1200px min
+$gridColumnWidth1200:     74px;
+$gridGutterWidth1200:     20px;
+$gridRowWidth1200:        ($gridColumns * $gridColumnWidth1200) + ($gridGutterWidth1200 * ($gridColumns - 1));
+
+// 768px-979px
+$gridColumnWidth768:      74px;
+$gridGutterWidth768:      20px;
+$gridRowWidth768:         ($gridColumns * $gridColumnWidth768) + ($gridGutterWidth768 * ($gridColumns - 1));
+
+/* custom colors */
+$pmDarkGray: #292929;
+$pmMediumGray: #434343;
+$pmMediumGray2: #5D5D5D;
+$pmMediumGray3: #919191;
+$pmGray: #EBEBEB;
+$pmBlue: #0E1B4F;
+
+$pmPink: #DF5590;
+
+$pmLightRed: #D889A8;
+$pmLightBlue: #b9e4ed;
+
+$pmWhite: #ffffff;
+
+$bodyBackground: $pmGray;
+$bodyBackgroundImage: url(#{$assetsPath}bg.jpg) $pmGray repeat 0 0;
+
+/* navigation */
+$navbarBackground: $pmGray;
+$navbarHeight: 97px;
+
+/* text */
+$linkColor: #767676;
+$linkColorHover: #8f8f8f;
+
+$baseFontSize: 16px;
+$baseFontFamily: "MetaProBook", Arial, sans-serif;
+$textColor: $pmMediumGray;
+$headingsColor: $pmLightRed;
+$headingsFontWeight: normal;
+$headingsFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$smallerHeadingsFontFamily: "MetaProMedium", Helvetica, Arial, sans-serif;
+$facebookUpdatesFontFamily: Arial, sans-serif;
+
+$marginBetweenBlocks: 4px;
+$distanceFromDivider: 25px;
+$distanceFromEdgeOfInfobox: 35px;
+$infoboxPadding: 15px;
+$dividerStyle: 1px solid $pmMediumGray;
+
+$errorColor: #EA5200;
+$testimonialGivenByColor: $pmMediumGray3;

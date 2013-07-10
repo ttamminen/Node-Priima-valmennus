@@ -1,0 +1,88 @@
+$mainPageInfoboxPadding: 34px;
+
+.wrapper-first-half {
+	float: left;
+	width: percentage(731px / $gridRowWidth);
+	margin-right: percentage(4px / $gridRowWidth) !important;
+}
+
+.wrapper-second-half {
+	float: left;
+	width: percentage(381px / $gridRowWidth) !important;
+	margin-right: 0px !important;
+	// TODO: calculate this somehow;
+	height: 629px
+}
+
+.main-promotion, .package-promotion, .training-session {
+	margin-bottom: 4px;
+}
+
+.package-promotion-for-companies, .learn-swimming-technique {
+	float: left;
+	display: inline-block;
+}
+
+.package-promotion-for-companies {
+	@extend .infobox;
+	@include border-box();
+	margin: 0;
+	padding: $mainPageInfoboxPadding;
+	padding-bottom: 28px;
+	padding-right: 50px;
+	// first half
+	// 302px + 4px + 424px => 730px
+	// something wrong with calc
+	width: percentage(302px / 780px);
+	height: 293px;
+	// TODO: should be calculated from width of first half
+	margin-right: 4px;
+}
+
+.social-media-updates {
+	@extend .infobox;
+	margin: 0;
+	@include border-box();
+	margin-right: 17px;
+	margin-bottom: 17px;
+	font-family: $facebookUpdatesFontFamily;
+	padding: 22px;
+	height: 228px;
+
+	h4 {
+		text-transform: uppercase;
+		color: $pmPink;
+		font-size: 25px;
+		line-height: 1;
+		margin-top: 0px;
+	}
+
+	ul {
+		@include no-bullets();
+		margin: 0;
+		padding: 0;
+
+		> li {
+			line-height: 1;
+			margin-bottom: 20px;
+		}
+	}
+
+	h5 {
+		color: $pmPink;
+		font-size: 11px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		margin: 0;
+		line-height: 1;
+	}
+
+	a {
+		font-size: 14px;
+		color: $pmMediumGray2;
+
+		&:hover {
+			color: lighten($pmMediumGray2, 20%);
+		}
+	}
+}

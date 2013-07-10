@@ -1,0 +1,59 @@
+@mixin infobox($infobox-border-color, $background-color, $padding) {
+	@include single-box-shadow(rgba(0,0,0,0.1), 2px, 1px, 1px, 0px , false);
+	@include transparent($background-color, 0.8);
+	border: 2px solid $infobox-border-color;
+	position: relative;
+	padding: $padding;
+	margin: 1em 0 3em;
+
+	&.arrow:before {
+		top: -20px;
+		bottom: auto;
+		left: auto;
+		right: 40px;
+		border-width: 0 20px 20px;
+	}
+
+	&.arrow:after {
+		content: "";
+		position: absolute;
+		top: -33px;
+		border-width: 0px 26px 32px 26px;
+		border-style: solid;
+		border-color: $background-color transparent;
+		display: block;
+		width: 0;
+	}
+
+	&.left:after {
+		left: 5%;
+	}
+
+	&.center:after {
+		left: 37%;
+	}
+
+	&.right:after {
+		left: 70%;
+	}
+
+	.close-button {
+		@extend .icons-btn-close;
+		position: absolute;
+		top: 5px;
+		right: 9px;
+		cursor: pointer;
+		border: 0;
+	}
+
+	p {
+		display: block;
+		width: 95%;
+	}
+}
+
+@mixin info-container($infobox-border-color, $background-color) {
+	@include single-box-shadow(rgba(0,0,0,0.1), 0px, 1px, 1px, 1px, false);
+	@include transparent($background-color, 0.8);
+	border: 2px solid $infobox-border-color;
+}

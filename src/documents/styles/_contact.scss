@@ -1,0 +1,87 @@
+.name-and-title {
+	@include makeColumn(6);
+}
+
+.addresses {
+	@include makeColumn(6);
+	@include box-sizing(border-box);
+	padding-left: 2px;
+}
+
+.priima-valmennus-in-social-media {
+	@include makeColumn(6);
+}
+
+.social-media-links {
+	@include makeColumn(6);
+	margin-top: 50px;
+	margin-left: 0px !important;
+}
+
+.compose-message {
+	@include makeColumn(12);
+}
+
+.form-input-wrapper {
+	@include makeColumn(4);
+}
+
+.submit-wrapper {
+	@include makeColumn(2, 1);
+	position: relative;
+	height: 176px;
+}
+
+.contact-form {
+	@extend .row-fluid;
+
+	label {
+		display: block;
+	}
+
+	input[type="text"], input[type="email"] {
+		max-width: 200px;
+	}
+
+	input, textarea {
+		width: 100%;
+		padding-left: 15px;
+		margin-top: 5px;
+		background: url(#{$assetsPath}bg.jpg) repeat fixed 0 0;
+		display: block;
+	}
+
+	input[type="submit"] {
+		@extend .icons-btn-submit;
+		border: 0;
+		position: absolute;
+		bottom: 0px;
+	}
+
+	label.name {
+		display: inline-block;
+		width: 35%;
+		padding-right: 10%;
+	}
+}
+
+.social-media-links ul {
+	@include horizontal-list();
+
+	li {
+		width: 30%;
+		cursor: pointer;
+	}
+
+	.facebook {
+		@extend .icons-socialmedia-facebook;
+	}
+
+	.twitter {
+		@extend .icons-socialmedia-twitter;
+	}
+
+	.blogger {
+		@extend .icons-socialmedia-blogger;
+	}
+}

@@ -1,0 +1,81 @@
+!!! 5
+
+//[if lt IE 7]><html lang="fi" class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]
+//[if IE 7]><html lang="fi" class="no-js lt-ie9 lt-ie8"><![endif]
+//[if IE 8]><html lang="fi" class="no-js lt-ie9"><![endif]
+//[if gt IE 8]><!
+html(class='no-js', lang='fi')
+  //<![endif]
+
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title Priima-valmennus - Laadukkaat Personal Trainer palvelut
+    link(rel='shortcut icon', href='/favicon.png')
+    link(rel='apple-touch-icon', href='/apple-touch-icon.png')
+    meta(name='description', content='Priima-valmennus tarjoaa yksityisille ja yrityksille Personal Trainer palveluita pääkaupunkiseudulla')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(property='og:title', content='Priima-valmennus')
+    meta(property='og:type', content='company')
+    meta(property='og:url', content='http://www.priimavalmennus.fi')
+    meta(property='og:image', content='http://www.tx3.fi/PV_Avatar_Small.png')
+    meta(property='og:site_name', content='Priima-valmennus')
+    meta(property='fb:admins', content='100004889530947')
+    link(rel='stylesheet', href='styles/main.css')
+    link(rel='stylesheet', href='components/flexslider/flexslider.css')
+    script(src='scripts/vendor/modernizr.min.js')
+    script(type='text/javascript')
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35080175-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+  body
+    //if lt IE 7
+      p.chromeframe
+        | You are using an outdated browser.
+        a(href='http://browsehappy.com/') Upgrade your browser today
+        | or
+        a(href='http://www.google.com/chromeframe/?redirect=true') install Google Chrome Frame
+        | to better experience this site.
+    #fb-root
+    script
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/fi_FI/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    header.site
+      nav.main
+        .container
+          a.brand(href='#')
+            img(src='/images/logo.png', alt='Priima-valmennus logo')
+          ul
+            li.active
+              a(href='#main-page') Etusivu
+            li
+              a(href='#priima-valmennus') Priima-valmennus
+            li
+              a(href='#services-for-individuals') Palvelut yksityisille
+            //
+              <li><a href="#services-for-companies">Palvelut yrityksille</a></li>
+            li
+              a(href='#contact') Yhteys
+
+    != content
+
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    script
+      window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\\/script>')
+    script(src='scripts/main.js')
+    script(src='scripts/app.js')
+    script(src='scripts/cryptography.js')
+    script(src='components/flexslider/jquery.flexslider.js')
+    script(src='components/jquery.scrollTo/jquery.scrollTo.js')
+    script(src='components/jquery.localScroll/jquery.localScroll.js')
+    script(src='components/jquery.validation/jquery.validate.js')
