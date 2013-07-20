@@ -24,7 +24,7 @@
 @import "compass/utilities";
 
 $icons-sprite-dimensions: true;
-@import 'icons/*.png';
+@import "icons/*.png";
 @include all-icons-sprites;
 
 //@import "compass_twitter_bootstrap_responsive";
