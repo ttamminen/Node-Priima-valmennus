@@ -60,6 +60,7 @@ docpadConfig = {
       sassPath: 'C:/Ruby187/bin/sass.bat'
       scssPath: 'C:/Ruby187/bin/scss.bat'
       compass: 'true'
+      requireLibraries: ['susy']
 }
 
 # Export the DocPad Configuration

@@ -1,3 +1,5 @@
+require 'susy'
+
 # Set this to the root of your project when deployed:
 css_dir = 'out/styles'
 sass_dir = 'src/documents/styles'

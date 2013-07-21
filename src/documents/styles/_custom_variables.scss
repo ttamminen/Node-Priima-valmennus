@@ -1,22 +1,5 @@
 $assetsPath: '/images/';
 
-// Default 1112px grid
-// -------------------------
-$gridColumns:             12;
-$gridColumnWidth:         93px;
-$gridGutterWidth:         0px; // 20px
-$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
-
-// 1200px min
-$gridColumnWidth1200:     74px;
-$gridGutterWidth1200:     20px;
-$gridRowWidth1200:        ($gridColumns * $gridColumnWidth1200) + ($gridGutterWidth1200 * ($gridColumns - 1));
-
-// 768px-979px
-$gridColumnWidth768:      74px;
-$gridGutterWidth768:      20px;
-$gridRowWidth768:         ($gridColumns * $gridColumnWidth768) + ($gridGutterWidth768 * ($gridColumns - 1));
-
 /* custom colors */
 $pmDarkGray: #292929;
 $pmMediumGray: #434343;
@@ -32,15 +15,23 @@ $pmLightBlue: #b9e4ed;
 
 $pmWhite: #ffffff;
 
+$pmRed: #EA5200;
+
 $bodyBackground: $pmGray;
 $bodyBackgroundImage: url(#{$assetsPath}bg.jpg) $pmGray repeat 0 0;
 
 /* navigation */
 $navbarBackground: $pmGray;
-$navbarHeight: 97px;
+$navbarHeight: 115px;
+
+/* divider */
+$distanceFromDivider: 25px;
+$dividerStyle: 1px solid $pmMediumGray;
+
+$errorColor: $pmRed;
 
 /* text */
-$linkColor: #767676;
+/*$linkColor: #767676;
 $linkColorHover: #8f8f8f;
 
 $baseFontSize: 16px;
@@ -59,4 +50,4 @@ $infoboxPadding: 15px;
 $dividerStyle: 1px solid $pmMediumGray;
 
 $errorColor: #EA5200;
-$testimonialGivenByColor: $pmMediumGray3;
+$testimonialGivenByColor: $pmMediumGray3;*/

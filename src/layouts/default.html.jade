@@ -74,11 +74,12 @@ html(class='no-js', lang='fi')
       js.src = "//connect.facebook.net/fi_FI/all.js#xfbml=1";
       fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
-    header.site
-      nav.main
-        .container
-          a.brand(href='#')
-            img(src='/images/logo.png', alt='Priima-valmennus logo')
+
+    div#page
+      header.site
+        a.brand(href='#')
+          img(src='/images/logo.png', alt='Priima-valmennus logo')
+        nav.main
           ul
             li.active
               a(href='#main-page') Etusivu
@@ -91,7 +92,9 @@ html(class='no-js', lang='fi')
             li
               a(href='#contact') Yhteys
 
-    != content
+      .main-content
+        div
+          != content
 
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
     script.

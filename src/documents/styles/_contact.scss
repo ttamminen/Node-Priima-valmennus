@@ -1,33 +1,34 @@
 .name-and-title {
-	@include makeColumn(6);
+	@include columns(6);
 }
 
 .addresses {
-	@include makeColumn(6);
+	@include columns(6);
 	@include box-sizing(border-box);
 	padding-left: 2px;
 }
 
 .priima-valmennus-in-social-media {
-	@include makeColumn(6);
+	@include columns(6);
 }
 
 .social-media-links {
-	@include makeColumn(6);
+	@include columns(6);
 	margin-top: 50px;
 	margin-left: 0px !important;
 }
 
 .compose-message {
-	@include makeColumn(12);
+	@include columns(12);
 }
 
 .form-input-wrapper {
-	@include makeColumn(4);
+	@include columns(4);
 }
 
 .submit-wrapper {
-	@include makeColumn(2, 1);
+	@include columns(2);
+	//@include makeColumn(2, 1);
 	position: relative;
 	height: 176px;
 }
