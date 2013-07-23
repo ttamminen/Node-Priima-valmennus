@@ -1,37 +1,25 @@
-$h1HeaderFontSize: 38px;
-$h1ContentFontSize: 30px;
-$h2FontSize: 28px;
-$h3FontSize: 24px;
+$sectionHeaderFontSize: 38px;
+$h2ContentFontSize: 28px;
+$h3FontSize: 28px;
+$h4FontSize: 24px;
 
-body {
-	font-family: $baseFontFamily;
-	line-height: 1.4;
-}
-
-section > header > h2 {
-	font-size: $h1HeaderFontSize;
+section > header > h2, section > header > h1 {
+	@include adjust-font-size-to($sectionHeaderFontSize);
 	font-family: $headingsFontFamily;
 	color: $pmLightBlue;
-	word-spacing: -3px;
-}
-
-h1 {
-	text-transform: uppercase;
-	color: $pmPink;
-	font-size: $h1ContentFontSize;
-	line-height: 1;
-}
-
-h2 {
-	font-size: $h2FontSize;
-	font-family: $headingsFontFamily;
-	color: $pmPink;
 }
 
 h3 {
-	font-size: $h3FontSize;
-	color: $pmMediumGray;
+	@include adjust-font-size-to($h3FontSize);
+	font-family: $headingsFontFamily;
+	color: $pmPink;
+}
+
+h4 {
+	@include adjust-font-size-to($h4FontSize,1.2);
 	font-family: $smallerHeadingsFontFamily;
+	color: $pmMediumGray;
+	@include adjust-leading-to(0.2);
 }
 
 a {

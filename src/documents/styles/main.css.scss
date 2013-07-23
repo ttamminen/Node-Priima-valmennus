@@ -32,15 +32,27 @@ $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 @import "compass/utilities";
 @import "susy";
 @import "spinner";
+@import "infobox";
+@import "typography";
+@import "mixins";
 
 $icons-sprite-dimensions: true;
 @import "icons/*.png";
 @include all-icons-sprites;
 
+$base-font-size: 16px;
+$base-line-height: 6px;
+
 @include establish-baseline;
 
 body {
+	font-family: $baseFontFamily;
 	background: $bodyBackgroundImage;
+	@include adjust-leading-to(4);
+}
+
+p {
+	color: $textColor;
 }
 
 img {
@@ -48,7 +60,7 @@ img {
 }
 
 #page {
-	@include container;
+	@include container($total-columns, 12);
 	@include susy-grid-background;
 }
 
@@ -57,15 +69,21 @@ img {
 }
 
 header.site {
-	@include span-columns(12);
 	position: fixed;
 	top: 0;
+	left: 0%;
+	right: 0%;
 	height: $navbarHeight;
 	z-index: 10;
+
+	> div {
+		@include container;
+	}
 }
 
 a.brand {
-	@include span-columns(3);
+	@include span-columns(2, 12);
+	@include suffix(5,12);
 	margin-top: 1em;
 
 	img {
@@ -75,11 +93,26 @@ a.brand {
 }
 
 nav.main {
-	@include span-columns(9);
+	@include span-columns(5, 12);
 	@include omega;
-	margin-top: 13px;
+	background: $bodyBackgroundImage;
+	padding-bottom: 14px;
+	border-bottom: $dividerStyle;
 
 	ul {
+		@include horizontal-list;
+		@extend .clearfix;
+		background: $bodyBackgroundImage;
+
+		li {
+			background: $bodyBackgroundImage;
+			a {
+				background: url(/images/bg.jpg) repeat fixed 0 0;
+				padding-top: 73px;
+				padding-bottom: 11px;
+				text-shadow: none;
+			}
+		}
 	}
 }
 
@@ -132,4 +165,48 @@ input[type=color],
 input[type=email],
 textarea {
 	@include border-radius(15px);
+}
+
+
+.social-media-updates {
+	@extend .infobox;
+	margin: 0;
+	@include border-box();
+	margin-right: 17px;
+	margin-bottom: 17px;
+	font-family: $socialMediaUpdatesTitleFontFamily;
+	padding: 22px;
+
+	h4 {
+		@include adjust-font-size-to($socialMediaUpdatesTitleFontSize);
+		text-transform: uppercase;
+		color: $pmPink;
+		margin-top: 0px;
+	}
+
+	ul {
+		@include no-bullets();
+		margin: 0;
+		padding: 0;
+
+		> li {
+			margin-bottom: 20px;
+		}
+	}
+
+	h5 {
+		@include adjust-font-size-to($socialMediaUpdateTitleFontSize);
+		color: $pmPink;
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+	a {
+		@include adjust-font-size-to($socialMediaUpdateFontSize);
+		color: $pmMediumGray2;
+
+		&:hover {
+			color: lighten($pmMediumGray2, 20%);
+		}
+	}
 }

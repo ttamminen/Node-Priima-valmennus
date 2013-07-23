@@ -30,6 +30,16 @@ $dividerStyle: 1px solid $pmMediumGray;
 
 $errorColor: $pmRed;
 
+/* typography */
+$baseFontFamily: "MetaProBook", Arial, sans-serif;
+$textColor: $pmMediumGray;
+$headingsFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$smallerHeadingsFontFamily: "MetaProMedium", Helvetica, Arial, sans-serif;
+$socialMediaUpdatesTitleFontFamily: Arial, sans-serif;
+$socialMediaUpdatesTitleFontSize: 25px;
+$socialMediaUpdateTitleFontSize: 11px;
+$socialMediaUpdateFontSize: 14px;
+
 /* text */
 /*$linkColor: #767676;
 $linkColorHover: #8f8f8f;
@@ -39,9 +49,6 @@ $baseFontFamily: "MetaProBook", Arial, sans-serif;
 $textColor: $pmMediumGray;
 $headingsColor: $pmLightRed;
 $headingsFontWeight: normal;
-$headingsFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$smallerHeadingsFontFamily: "MetaProMedium", Helvetica, Arial, sans-serif;
-$facebookUpdatesFontFamily: Arial, sans-serif;
 
 $marginBetweenBlocks: 4px;
 $distanceFromDivider: 25px;

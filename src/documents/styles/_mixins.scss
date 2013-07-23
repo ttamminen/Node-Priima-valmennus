@@ -1,6 +1,6 @@
 @import "compass/css3";
 
-@mixin override_gradient_vertical() {
+/*@mixin override_gradient_vertical() {
 	background-color:transparent;
 	background-image: none;
 	background-image: none;
@@ -18,7 +18,7 @@
 
 @mixin no-borders() {
 	border: none;
-}
+}*/
 
 @mixin transparent($color, $alpha) {
 	$rgba: rgba($color, $alpha);
