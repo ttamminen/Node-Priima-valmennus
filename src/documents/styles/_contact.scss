@@ -1,4 +1,102 @@
-.name-and-title {
+.name-and-title, .addresses, .social-media-links, .in-social-media-title {
+	@include span-columns(6, 12);
+}
+
+.addresses, .social-media-links {
+	@include omega;
+}
+
+.addresses {
+	@include box-sizing(border-box);
+}
+
+.in-social-media, .contact-information, .compose-message {
+	@include span-columns(12, 12);
+	@extend .info-area-wrapper;
+	@include box-sizing(border-box);
+}
+
+.social-media-links ul {
+	@include horizontal-list();
+
+	li {
+		@include span-columns(2, 6);
+		cursor: pointer;
+		padding: 0;
+		&.last-child {
+			@include omega;
+			@include post(2);
+		}
+	}
+
+	.facebook {
+		@extend .icons-socialmedia-facebook;
+	}
+
+	.twitter {
+		@extend .icons-socialmedia-twitter;
+	}
+
+	.blogger {
+		@extend .icons-socialmedia-blogger;
+	}
+}
+
+.contact-form {
+	@include clearfix;
+
+	.customer-contact-information
+	{
+		@include span-columns(4, 12);
+	}
+
+	.message {
+		@include span-columns(5, 12);
+		@include suffix(1);
+	}
+
+	.submit {
+		@include span-columns(2, 12);
+		@include omega;
+		position: relative;
+		// TODO: can this be done in a better way
+		height: 180px;
+
+		> input {
+			position: absolute;
+			bottom: 0;
+		}
+	}
+
+	label {
+		display: block;
+	}
+
+	input[type="text"], input[type="email"] {
+		max-width: 200px;
+	}
+
+	input, textarea {
+		width: 100%;
+		padding-left: 15px;
+		margin-top: 5px;
+		background: url(#{$assetsPath}bg.jpg) repeat fixed 0 0;
+		display: block;
+	}
+
+	input[type="submit"] {
+		@extend .icons-btn-submit;
+		border: 0;
+	}
+
+	label.name {
+		display: inline-block;
+		width: 35%;
+		padding-right: 10%;
+	}
+}
+
+/*.name-and-title {
 	@include columns(6);
 }
 
@@ -85,4 +183,4 @@
 	.blogger {
 		@extend .icons-socialmedia-blogger;
 	}
-}
+}*/

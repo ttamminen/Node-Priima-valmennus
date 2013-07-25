@@ -36,6 +36,11 @@ $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 @import "typography";
 @import "mixins";
 
+@import "navigation2";
+@import "priimavalmennus";
+@import "individuals";
+@import "contact";
+
 $icons-sprite-dimensions: true;
 @import "icons/*.png";
 @include all-icons-sprites;
@@ -61,7 +66,7 @@ img {
 
 #page {
 	@include container($total-columns, 12);
-	@include susy-grid-background;
+	//@include susy-grid-background;
 }
 
 .main-content {
@@ -93,8 +98,7 @@ a.brand {
 }
 
 nav.main {
-	@include span-columns(5, 12);
-	@include omega;
+	@include span-columns(5 omega, 12);
 	background: $bodyBackgroundImage;
 	padding-bottom: 14px;
 	border-bottom: $dividerStyle;
@@ -121,6 +125,11 @@ section.page-content {
 	padding-bottom: $distanceFromDivider;
 	padding-top: $distanceFromDivider;
 	border-bottom: $dividerStyle;
+}
+
+section > header > h2, section > header > h1 {
+	margin-left: 2%;
+	margin-right: 2%;
 }
 
 .wrapper-first-half {
@@ -209,4 +218,55 @@ textarea {
 			color: lighten($pmMediumGray2, 20%);
 		}
 	}
+}
+
+.infobox {
+	@include infobox($pmWhite, $pmWhite, $infoboxPadding);
+}
+
+.info-area-wrapper {
+	@include info-container($pmWhite, $pmWhite);
+	padding-bottom: $distanceFromEdgeOfInfobox - 10;
+
+	p {
+		@include adjust-font-size-to(16px);
+	}
+
+	h2 {
+		color: $pmPink;
+		text-transform: uppercase;
+		@include adjust-font-size-to($sectionHeaderFontSize);
+	}
+
+	h2 > span {
+		color: $pmMediumGray;
+		text-transform: none;
+	}
+
+	h3 {
+		line-height: 1;
+	}
+
+	h3 > span {
+		@include adjust-font-size-to($base-font-size + 2);
+	}
+
+	> div > div:first-child, > nav > div:first-child {
+		margin-top: $distanceFromEdgeOfInfobox - 10;
+		margin-left: $distanceFromEdgeOfInfobox;
+	}
+
+	> div > div {
+		margin-top: $distanceFromEdgeOfInfobox - 10;
+	}
+}
+
+.read-more {
+	@extend .icons-read-more;
+	border: 0;
+}
+
+.page-content > header {
+	background-color: $pmDarkGray;
+	margin-bottom: 44px
 }

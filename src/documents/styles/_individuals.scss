@@ -1,18 +1,18 @@
-.foreword {
-	@include columns(12);
+.package {
+	@include span-columns(4, 12);
 }
 
-.package {
-	@include columns(4);
+.package:last-child {
+	@include omega;
 }
 
 .more-infomation-about-package {
-	@include columns(12);
+	@include span-columns(12, 12);
 	height: 200px;
 }
 
 .process {
-	@include columns(12);
+	@include span-columns(12, 12);
 	text-align: center;
 	margin-bottom: $distanceFromDivider;
 }

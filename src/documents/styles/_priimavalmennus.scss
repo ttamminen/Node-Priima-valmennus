@@ -2,6 +2,193 @@ $marginBetweenItems: 19px;
 $highlightTestimonialPadding: 50px;
 
 .company-information {
+	@include span-columns(9, 12);
+}
+
+.area-list
+{
+	@include horizontal-list;
+
+	> li {
+		@include adjust-font-size-to($base-font-size + 2);
+	}
+}
+
+.priima-valmennus-facebook {
+	@extend .infobox;
+	@include box-sizing(border-box);
+	@include span-columns(3, 12);
+	@include omega;
+	margin-top: 90px;
+
+	padding-top: $marginBetweenItems;
+	padding-bottom: $marginBetweenItems;
+  	text-align: center;
+
+  	button {
+		border: 0;
+		padding: 0;
+  	}
+
+	.suggestion {
+		text-align: center;
+		color: $pmPink;
+		border-bottom: 1px solid $pmWhite;
+	}
+
+	.mini-priima-valmennus {
+		border-top: 1px solid $pmGray;
+
+		button {
+			@extend .icons-priima-valmennus-mini;
+			border: 1px solid $pmGray;
+			margin-top: $marginBetweenItems;
+			margin-bottom: $marginBetweenItems;
+		}
+	}
+
+	.priima-valmennus-in-facebook {
+		color: $pmBlue;
+		margin-bottom: $marginBetweenItems;
+	}
+
+	.facebook-like {
+		button {
+			@extend .icons-facebook-like;
+		}
+	}
+}
+
+.title-content-wrapper {
+	@extend .info-area-wrapper;
+}
+
+.cv-wrapper {
+	@include span-columns(12, 12);
+
+	.cv-photo {
+		@include span-columns(3, 12);
+	}
+
+	.title-content-wrapper {
+		@include span-columns(9 omega, 12);
+		@include border-box();
+		padding: 0;
+	}
+
+	.title-wrapper {
+		padding-left: 10px;
+	}
+
+	h3 {
+		font-family: $headingsFontFamily;
+		text-transform: uppercase;
+		color: $pmPink;
+		line-height: 1;
+		font-size: 27px;
+	}
+}
+
+.customer-feedback {
+	@include span-columns(12, 12);
+
+	margin-top: $distanceFromDivider;
+
+	.given-by {
+		&:before {
+			content: "- ";
+		}
+
+		display: block;
+		color: $testimonialGivenByColor;
+		margin-top: 20px;
+	}
+
+	span.separator {
+		display: inline-block;
+		letter-spacing: -3px;
+		margin-right: 3px;
+	}
+
+	.highlight-testimonial-and-leave-feedback-wrapper {
+		@include span-columns(6, 12);
+	}
+
+	.highlight-testimonial {
+		@include box-sizing(border-box);
+		// TODO: add white shadow under
+		border-top: 1px solid $pmMediumGray;
+		border-bottom: 1px solid $pmMediumGray;
+		padding-top: $highlightTestimonialPadding;
+		padding-bottom: $highlightTestimonialPadding;
+		// TODO: global font-size declaration
+		@include adjust-font-size-to(22px);
+		font-style: italic;
+	}
+
+	.customer-satisfaction-first {
+		@include span-columns(6, 12);
+		@include omega;
+
+		div {
+			padding-left: $distanceFromEdgeOfInfobox;
+		}
+
+		.testimonial-header {
+			background-color: $pmWhite;
+			padding-top: 25px;
+			padding-bottom: 22px;
+		}
+
+		.testimonials {
+			background-color: $pmGray;
+			padding-top: 38px;
+			padding-bottom: 38px;
+			padding-right: 38px;
+			font-style: italic;
+		}
+
+		ul {
+			@include no-bullets();
+			margin: 0;
+		}
+
+		li {
+			margin-bottom: 40px;
+		}
+
+		span {
+			color: $pmPink;
+		}
+	}
+
+	.your-opinion {
+		margin-top: 70px;
+	}
+
+	h3 {
+		font-family: $headingsFontFamily;
+		text-transform: uppercase;
+		color: $pmPink;
+		// TODO: fix this
+		@include adjust-font-size-to($sectionHeaderFontSize * 0.8);
+	}
+
+	.give-feedback-wrapper {
+		position: relative;
+
+		p {
+			width: 62%;
+			@include inline-block();
+		}
+	}
+}
+
+/*
+$marginBetweenItems: 19px;
+$highlightTestimonialPadding: 50px;
+
+.company-information {
 	float: left;
 	display: inline-block;
 	width: 75%;
@@ -200,4 +387,4 @@ $highlightTestimonialPadding: 50px;
 			@include inline-block();
 		}
 	}
-}
+}*/

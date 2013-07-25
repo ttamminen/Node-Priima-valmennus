@@ -7,6 +7,15 @@ section > header > h2, section > header > h1 {
 	@include adjust-font-size-to($sectionHeaderFontSize);
 	font-family: $headingsFontFamily;
 	color: $pmLightBlue;
+	text-transform: uppercase;
+	font-weight: 200;
+}
+
+h2 {
+	@include adjust-font-size-to($h2ContentFontSize);
+	font-family: $headingsFontFamily;
+	color: $pmPink;
+	font-weight: 200;
 }
 
 h3 {
@@ -19,7 +28,7 @@ h4 {
 	@include adjust-font-size-to($h4FontSize,1.2);
 	font-family: $smallerHeadingsFontFamily;
 	color: $pmMediumGray;
-	@include adjust-leading-to(0.2);
+	font-weight: 400;
 }
 
 a {

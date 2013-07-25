@@ -1,4 +1,12 @@
-nav.main {
+nav.main ul li a {
+	float: left;
+	display: block;
+	text-decoration: none;
+	color: #555;
+	padding: 73px 15px 11px 15px;
+}
+
+/*nav.main {
 	@extend .navbar;
 	@extend .navbar-fixed-top;
 }
@@ -39,7 +47,6 @@ nav.main > div > ul > li {
 		text-shadow: none;
 	}
 
-	/* remove box shadow from active li links */
 	&.active, &.active:hover {
 		a {
 			background-image: none;
@@ -48,4 +55,4 @@ nav.main > div > ul > li {
 			color: $pmGray;
 		}
 	}
-}
+}*/

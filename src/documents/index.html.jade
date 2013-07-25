@@ -133,10 +133,8 @@ section#priima-valmennus.page-content
 section#services-for-individuals.page-content
   header
     h2 Palvelut yksityisille
-  div
-    .foreword
-      p
-        | Me Priima-valmennuksella uskomme tapaamiskertojen määrän vaikuttavan voimakkaasti tuloksiin. Pakettien lisäksi tarjoamme lajiopetusta. Mikäli olet kiinnostunut vain uinti-, juoksu tai kahvakuulaharjoituksista, ota myös siinä tapauksessa rohkeasti yhteyttä.
+  p
+    | Me Priima-valmennuksella uskomme tapaamiskertojen määrän vaikuttavan voimakkaasti tuloksiin. Pakettien lisäksi tarjoamme lajiopetusta. Mikäli olet kiinnostunut vain uinti-, juoksu tai kahvakuulaharjoituksista, ota myös siinä tapauksessa rohkeasti yhteyttä.
   div
     .package
       h4 Oivallus
@@ -149,9 +147,8 @@ section#services-for-individuals.page-content
       h4 Häätsemppi
       ul
         li morsiamelle tai sulhaselle
-        li
-          | hääkiireisen ravinto- ja liikuntasuunnitelma
-          li 2 tapaamiskertaa / vko, 3 kk aikana
+        li hääkiireisen ravinto- ja liikuntasuunnitelma
+        li 2 tapaamiskertaa / vko, 3 kk aikana
       button.read-more(target='haatsemppi-info', package-name='Häätsemppi')
     .package
       h4 Priima-paketti
@@ -179,77 +176,65 @@ section#services-for-individuals.page-content
         p
           | Kaipaatko täydellistä elämäntaparemonttia? Haluaisitko päästä eroon vanhoista heikkouksistasi ruoan ja liikunnan suhteen? Tarvitsetko siihen hyvin intensiivistä tukea?
           | Tarjoan sinulle 3 tapaamiskertaa viikossa neljän ensimmäisen kuukauden aikana. Tämän jälkeen kerran viikossa kahden kuukauden ajan. Kaiken tämän lisäksi pakettiin kuuluu laaja ravintosuunnitelma. Luota itseesi, luota valmentajaasi, niin yhdessä onnistumme!
-  div
-    .process
-      img(src='images/process.png', alt='Miten edetään: tule moikkaamaan, laaditaan yhdessä suunnitelma, testataan lähtökuntosi, katsotaan jääkaappisi salaisuudet, hikoillaan yhdessä, osaat jo treenata yksin, osaat jo rentoutua ja katsotaan tulokset.')
+  img.process(src='images/process.png', alt='Miten edetään: tule moikkaamaan, laaditaan yhdessä suunnitelma, testataan lähtökuntosi, katsotaan jääkaappisi salaisuudet, hikoillaan yhdessä, osaat jo treenata yksin, osaat jo rentoutua ja katsotaan tulokset.')
 section#contact.page-content
   header
     h2 Yhteystiedot
-  //
-     upper part
-  .info-area-wrapper
+
+  .contact-information
     .name-and-title
-      div
-        h2
-          | Vera Tamminen
-          br
-          span LitM, Personal Trainer
-    .addresses.box-sized
-      div
-        p.contact
-          span Y-tunnus 2376299-9
-          br
-          span Puh:
-          a(href='tel:+358443714401') 044 3714401
-          br
-          span
-            | S-posti:
-            a.crypted-email(href='mailto:iren@cevvzninyzraahf.sv')
-  //
-     middle part
-  .info-area-wrapper
-    .priima-valmennus-in-social-media
-      div
-        h2
-          | Priima-valmennus
-          br
-          span sosiaalisessa mediassa
+      h2
+        | Vera Tamminen
+        br
+        span LitM, Personal Trainer
+    .addresses
+      p.contact
+        span Y-tunnus 2376299-9
+        br
+        span Puh:
+        a(href='tel:+358443714401') 044 3714401
+        br
+        span
+          | S-posti:
+          a.crypted-email(href='mailto:iren@cevvzninyzraahf.sv')
+
+  .in-social-media
+    h2.in-social-media-title
+      | Priima-valmennus
+      br
+      span sosiaalisessa mediassa
     nav.social-media-links
-      div
-        ul
-          li
-            a(href='https://www.facebook.com/PriimaValmennus')
-              .facebook
-          li
-            a(href='http://priimavalmennus.blogspot.fi')
-              .blogger
-  //
-     lower part
-  .info-area-wrapper
-    .compose-message
-      div
-        h4
-          | Jätä yhteydenottopyyntö tai anna palautetta
-          br
-          span Täytäthän kaikki kohdat
-        form.contact-form(enctype='multipart/form-data', method='post', action='https://tx3.wufoo.com/forms/z7x3p9/#public')
-          .form-input-wrapper.other-content
-            label.name
-              | Etunimi:
-              input.required(type='text', name='Field214')
-            label.name
-              | Sukunimi:
-              input.required(type='text', name='Field215')
-            label
-              | Puhelinnumero:
-              input.required(type='text', name='Field108')
-            label
-              | Sähköposti:
-              input.required.email(type='email', name='Field2')
-          .form-input-wrapper.other-content
-            label
-              | Sana vapaa:
-              textarea.required(rows='7', cols='80', maxlength='9999', name='Field1')
-          .submit-wrapper.other-content
-            input(type='submit', value='')
-          input#idstamp(type='hidden', name='idstamp', value='qCYXsng3/A9ZU8BMIi/cq8i2QHmNhow5pvzctMNEfv8=')
+      ul
+        li
+          a(href='https://www.facebook.com/PriimaValmennus')
+            .facebook
+        li
+          a(href='http://priimavalmennus.blogspot.fi')
+            .blogger
+
+  .compose-message
+    h4
+      | Jätä yhteydenottopyyntö tai anna palautetta
+      br
+      span Täytäthän kaikki kohdat
+    form.contact-form(enctype='multipart/form-data', method='post', action='https://tx3.wufoo.com/forms/z7x3p9/#public')
+      .customer-contact-information
+        label.name
+          | Etunimi:
+          input.required(type='text', name='Field214')
+        label.name
+          | Sukunimi:
+          input.required(type='text', name='Field215')
+        label
+          | Puhelinnumero:
+          input.required(type='text', name='Field108')
+        label
+          | Sähköposti:
+          input.required.email(type='email', name='Field2')
+      .message
+        label
+          | Sana vapaa:
+          textarea.required(rows='7', cols='80', maxlength='9999', name='Field1')
+      .submit
+        input(type='submit', value='')
+      input#idstamp(type='hidden', name='idstamp', value='qCYXsng3/A9ZU8BMIi/cq8i2QHmNhow5pvzctMNEfv8=')

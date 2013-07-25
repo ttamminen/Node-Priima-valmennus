@@ -28,6 +28,9 @@ $navbarHeight: 115px;
 $distanceFromDivider: 25px;
 $dividerStyle: 1px solid $pmMediumGray;
 
+/* infobox */
+$distanceFromEdgeOfInfobox: 35px;
+
 $errorColor: $pmRed;
 
 /* typography */
@@ -39,6 +42,11 @@ $socialMediaUpdatesTitleFontFamily: Arial, sans-serif;
 $socialMediaUpdatesTitleFontSize: 25px;
 $socialMediaUpdateTitleFontSize: 11px;
 $socialMediaUpdateFontSize: 14px;
+
+$infoboxPadding: 15px;
+
+/* testimonials */
+$testimonialGivenByColor: $pmMediumGray3;
 
 /* text */
 /*$linkColor: #767676;
@@ -52,9 +60,7 @@ $headingsFontWeight: normal;
 
 $marginBetweenBlocks: 4px;
 $distanceFromDivider: 25px;
-$distanceFromEdgeOfInfobox: 35px;
-$infoboxPadding: 15px;
+
 $dividerStyle: 1px solid $pmMediumGray;
 
-$errorColor: #EA5200;
-$testimonialGivenByColor: $pmMediumGray3;*/
+$errorColor: #EA5200;*/
