@@ -73,7 +73,12 @@ img {
 	padding-top: $navbarHeight;
 }
 
+.site-background {
+	background: url(/images/bg.jpg) repeat fixed 0 0;
+}
+
 header.site {
+	@extend .site-background;
 	position: fixed;
 	top: 0;
 	left: 0%;
@@ -83,40 +88,20 @@ header.site {
 
 	> div {
 		@include container;
+		@extend .site-background;
+		border-bottom: $dividerStyle;
 	}
 }
 
-a.brand {
+.brand {
 	@include span-columns(2, 12);
-	@include suffix(5,12);
+	@include suffix(4,12);
+	@extend .site-background;
 	margin-top: 1em;
 
 	img {
 		width: auto;
 		height: auto;
-	}
-}
-
-nav.main {
-	@include span-columns(5 omega, 12);
-	background: $bodyBackgroundImage;
-	padding-bottom: 14px;
-	border-bottom: $dividerStyle;
-
-	ul {
-		@include horizontal-list;
-		@extend .clearfix;
-		background: $bodyBackgroundImage;
-
-		li {
-			background: $bodyBackgroundImage;
-			a {
-				background: url(/images/bg.jpg) repeat fixed 0 0;
-				padding-top: 73px;
-				padding-bottom: 11px;
-				text-shadow: none;
-			}
-		}
 	}
 }
 
