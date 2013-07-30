@@ -1,11 +1,3 @@
-.package {
-	@include span-columns(4, 12);
-}
-
-.package:last-child {
-	@include omega;
-}
-
 .more-infomation-about-package {
 	@include span-columns(12, 12);
 	height: 200px;

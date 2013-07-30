@@ -20,26 +20,33 @@
   	src: url('/fonts/otf/MetaPro-Medium.otf?') format('eot'), url('/fonts/woff/MetaPro-Medium.woff') format('woff'), url('/fonts/ttf/MetaPro-Medium.ttf') format('truetype');
 }
 
+// main container
 $total-columns  : 12;             // a 12-column grid
 $column-width   : 5em;            // each column is 4em wide
 $gutter-width   : 1em;            // 1em gutters between columns
 $grid-padding   : $gutter-width;  // grid-padding equal to gutters
+$show-grid-backgrounds: true;
+$tablet: 4;
+$desktop: 12;
+$mobile: 2;
 
-//@import "compass_twitter_bootstrap";
 @import "normalize";
 @import "compass";
 @import "custom_variables";
 @import "compass/utilities";
 @import "susy";
+@import "typography";
+
 @import "spinner";
 @import "infobox";
-@import "typography";
-@import "mixins";
 
-@import "navigation2";
+@import "mainpage";
+@import "header";
 @import "priimavalmennus";
 @import "individuals";
 @import "contact";
+
+@import "responsive";
 
 $icons-sprite-dimensions: true;
 @import "icons/*.png";
@@ -74,7 +81,7 @@ img {
 }
 
 .site-background {
-	background: url(/images/bg.jpg) repeat fixed 0 0;
+	background: url(/images/bg.jpg) repeat 0 0;
 }
 
 header.site {
@@ -84,7 +91,7 @@ header.site {
 	left: 0%;
 	right: 0%;
 	height: $navbarHeight;
-	z-index: 10;
+	z-index: 1000;
 
 	> div {
 		@include container;
@@ -93,10 +100,22 @@ header.site {
 	}
 }
 
+@include grid-settings(12, 80px, 4px, 4px) {
+	.main-page-tiles {
+		@include container();
+		@include susy-grid-background;
+	}
+
+	.wrapper-first-half {
+		margin-right: 4px;
+	}
+
+	.wrapper-second-half {
+		float: left;
+	}
+}
+
 .brand {
-	@include span-columns(2, 12);
-	@include suffix(4,12);
-	@extend .site-background;
 	margin-top: 1em;
 
 	img {
@@ -110,33 +129,16 @@ section.page-content {
 	padding-bottom: $distanceFromDivider;
 	padding-top: $distanceFromDivider;
 	border-bottom: $dividerStyle;
-}
 
-section > header > h2, section > header > h1 {
-	margin-left: 2%;
-	margin-right: 2%;
-}
+	> header {
+		background-color: $pmDarkGray;
+		margin-bottom: 44px;
 
-.wrapper-first-half {
-	@include span-columns(8);
-}
-
-.wrapper-second-half {
-	@include span-columns(4);
-	@include omega;
-}
-
-.main-promotion {
-	@include span-columns(12);
-}
-
-.package-promotion-for-companies {
-	@include span-columns(5);
-}
-
-.learn-swimming-technique {
-	@include span-columns(7);
-	@include omega;
+		> h1, > h2 {
+			margin-left: 2%;
+			margin-right: 2%;
+		}
+	}
 }
 
 .hidden {
@@ -151,107 +153,7 @@ section > header > h2, section > header > h1 {
 	color: $pmPink;
 }
 
-input[type=text],
-input[type=url],
-input[type=tel],
-input[type=number],
-input[type=color],
-input[type=email],
-textarea {
-	@include border-radius(15px);
-}
-
-
-.social-media-updates {
-	@extend .infobox;
-	margin: 0;
-	@include border-box();
-	margin-right: 17px;
-	margin-bottom: 17px;
-	font-family: $socialMediaUpdatesTitleFontFamily;
-	padding: 22px;
-
-	h4 {
-		@include adjust-font-size-to($socialMediaUpdatesTitleFontSize);
-		text-transform: uppercase;
-		color: $pmPink;
-		margin-top: 0px;
-	}
-
-	ul {
-		@include no-bullets();
-		margin: 0;
-		padding: 0;
-
-		> li {
-			margin-bottom: 20px;
-		}
-	}
-
-	h5 {
-		@include adjust-font-size-to($socialMediaUpdateTitleFontSize);
-		color: $pmPink;
-		text-transform: uppercase;
-		margin: 0;
-	}
-
-	a {
-		@include adjust-font-size-to($socialMediaUpdateFontSize);
-		color: $pmMediumGray2;
-
-		&:hover {
-			color: lighten($pmMediumGray2, 20%);
-		}
-	}
-}
-
-.infobox {
-	@include infobox($pmWhite, $pmWhite, $infoboxPadding);
-}
-
-.info-area-wrapper {
-	@include info-container($pmWhite, $pmWhite);
-	padding-bottom: $distanceFromEdgeOfInfobox - 10;
-
-	p {
-		@include adjust-font-size-to(16px);
-	}
-
-	h2 {
-		color: $pmPink;
-		text-transform: uppercase;
-		@include adjust-font-size-to($sectionHeaderFontSize);
-	}
-
-	h2 > span {
-		color: $pmMediumGray;
-		text-transform: none;
-	}
-
-	h3 {
-		line-height: 1;
-	}
-
-	h3 > span {
-		@include adjust-font-size-to($base-font-size + 2);
-	}
-
-	> div > div:first-child, > nav > div:first-child {
-		margin-top: $distanceFromEdgeOfInfobox - 10;
-		margin-left: $distanceFromEdgeOfInfobox;
-	}
-
-	> div > div {
-		margin-top: $distanceFromEdgeOfInfobox - 10;
-	}
-}
-
 .read-more {
 	@extend .icons-read-more;
 	border: 0;
-}
-
-.page-content > header {
-	background-color: $pmDarkGray;
-	margin-bottom: 44px
 }

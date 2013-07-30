@@ -1,4 +1,84 @@
-$mainPageInfoboxPadding: 34px;
+.social-media-updates {
+	@extend .infobox;
+	@include border-box();
+	margin-top: 0;
+	font-family: $socialMediaUpdatesTitleFontFamily;
+	padding: 22px;
+
+	h4 {
+		@include adjust-font-size-to($socialMediaUpdatesTitleFontSize);
+		font-family: $headingsFontFamily;
+		text-transform: uppercase;
+		color: $pmPink;
+		margin-top: 0px;
+	}
+
+	ul {
+		@include no-bullets();
+		margin: 0;
+		padding: 0;
+
+		> li {
+			margin-bottom: 20px;
+		}
+	}
+
+	h5 {
+		@include adjust-font-size-to($socialMediaUpdateTitleFontSize);
+		color: $pmPink;
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+	a {
+		@include adjust-font-size-to($socialMediaUpdateFontSize);
+		color: $pmMediumGray2;
+
+		&:hover {
+			color: lighten($pmMediumGray2, 20%);
+		}
+	}
+}
+
+.main-page-tiles {
+	a {
+		display: block;
+	}
+}
+
+.main-promotion {
+	@include span-columns(12);
+}
+
+.package-promotion {
+	img {
+		max-width: 364px;
+		max-height: 141px;
+	}
+}
+
+.package-promotion-for-companies {
+	@extend .infobox;
+	@include border-box();
+	@include span-columns(5);
+	margin-top: 0;
+
+	img {
+		max-width: 230px;
+		max-height: 235px;
+	}
+}
+
+.learn-swimming-technique {
+	@include span-columns(7);
+	@include omega;
+}
+
+.main-promotion, .package-promotion {
+	margin-bottom: 4px;
+}
+
+/*$mainPageInfoboxPadding: 34px;
 
 .wrapper-first-half {
 	float: left;
@@ -41,8 +121,8 @@ $mainPageInfoboxPadding: 34px;
 
 .social-media-updates {
 	@extend .infobox;
-	margin: 0;
 	@include border-box();
+	margin: 0;
 	margin-right: 17px;
 	margin-bottom: 17px;
 	font-family: $facebookUpdatesFontFamily;
@@ -85,4 +165,4 @@ $mainPageInfoboxPadding: 34px;
 			color: lighten($pmMediumGray2, 20%);
 		}
 	}
-}
+}*/

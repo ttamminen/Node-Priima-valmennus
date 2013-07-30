@@ -7,7 +7,7 @@
     "npm": "1.2"
   },
   "dependencies": {
-    "docpad": "~6.46.1",
+    "docpad": "~6.46.5",
     "docpad-plugin-sass": "~2.6.0",
     "docpad-plugin-jade": "~2.4.1",
     "docpad-plugin-livereload": "~2.4.0"

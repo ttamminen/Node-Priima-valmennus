@@ -1,0 +1,147 @@
+@include at-breakpoint($mobile){
+	// header
+	.brand {
+		@include span-columns(2, 12);
+	}
+
+	// main-page
+	.wrapper-first-half {
+		@include span-columns(12, 12);
+	}
+
+	.wrapper-second-half {
+		@include span-columns(12, 12);
+		@include remove-omega;
+	}
+
+	// priima-valmennus
+	.company-information {
+		@include span-columns(12, 12);
+	}
+
+	.priima-valmennus-facebook {
+		@include span-columns(12, 12);
+	}
+
+	// packages for individuals
+	.package {
+		@include span-columns(12, 12);
+	}
+
+	.package:last-child {
+		@include remove-omega;
+	}
+
+	// contact
+	.social-media-links ul {
+		li {
+			@include span-columns(6, 6);
+			&.last-child {
+				@include remove-omega;
+			}
+		}
+	}
+
+	.name-and-title, .addresses, .social-media-links, .in-social-media-title {
+		@include span-columns(12, 12);
+	}
+
+	.addresses, .social-media-links {
+		@include remove-omega;
+	}
+
+	.contact-form {
+		.customer-contact-information
+		{
+			@include span-columns(12, 12);
+		}
+
+		.message {
+			@include span-columns(12, 12);
+		}
+
+		.submit {
+			@include span-columns(12, 12);
+			@include remove-omega;
+			height: 60px;
+		}
+	}
+}
+
+// Desktop
+@include at-breakpoint($desktop) {
+	// header
+	.brand {
+		@include span-columns(2, 12);
+		@include suffix(4,12);
+	}
+
+	// main-page
+	.wrapper-first-half {
+		@include span-columns(8,12);
+	}
+
+	.wrapper-second-half {
+		@include span-columns(4, 12);
+		@include omega;
+	}
+
+	// priima-valmennus
+	.company-information {
+		@include span-columns(8, 12);
+		@include suffix(1);
+	}
+
+    .priima-valmennus-facebook {
+    	@include span-columns(3 omega, 12);
+	}
+
+	// packages for individuals
+	.package {
+		@include span-columns(4, 12);
+	}
+
+	.package:last-child {
+		@include omega;
+	}
+
+	// contact
+	.in-social-media, .contact-information, .compose-message {
+		@include span-columns(12, 12);
+	}
+
+	.social-media-links ul {
+		li {
+			@include span-columns(2, 6);
+			&.last-child {
+				@include omega;
+				@include post(2);
+			}
+		}
+	}
+
+	.name-and-title, .addresses, .social-media-links, .in-social-media-title {
+		@include span-columns(6, 12);
+	}
+
+	.addresses, .social-media-links {
+		@include omega;
+	}
+
+	.contact-form {
+		.customer-contact-information
+		{
+			@include span-columns(4, 12);
+		}
+
+		.message {
+			@include span-columns(5, 12);
+			@include suffix(1);
+		}
+
+		.submit {
+			@include span-columns(2, 12);
+			@include omega;
+		}
+	}
+}

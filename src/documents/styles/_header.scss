@@ -5,12 +5,18 @@ nav.main {
 	ul {
 		@include horizontal-list;
 		@extend .clearfix;
-		background: $bodyBackgroundImage;
 
 		li {
 			a {
 				padding-top: 73px;
 				text-shadow: none;
+			}
+
+			&.active, &.active:hover {
+				a {
+					background-color: $pmDarkGray;
+					color: $pmGray;
+				}
 			}
 		}
 	}
@@ -23,6 +29,7 @@ nav.main ul li a {
 	color: #555;
 	padding: 73px 15px 11px 15px;
 }
+
 
 /*nav.main {
 	@extend .navbar;

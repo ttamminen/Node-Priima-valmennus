@@ -1,10 +1,11 @@
+@import "mixins";
+
 @mixin infobox($infobox-border-color, $background-color, $padding) {
 	@include single-box-shadow(rgba(0,0,0,0.1), 2px, 1px, 1px, 0px , false);
 	@include transparent($background-color, 0.8);
 	border: 2px solid $infobox-border-color;
 	position: relative;
 	padding: $padding;
-	margin: 1em 0 3em;
 
 	&.arrow:before {
 		top: -20px;
@@ -56,4 +57,45 @@
 	@include single-box-shadow(rgba(0,0,0,0.1), 0px, 1px, 1px, 1px, false);
 	@include transparent($background-color, 0.8);
 	border: 2px solid $infobox-border-color;
+}
+
+.infobox {
+	@include infobox($pmWhite, $pmWhite, $infoboxPadding);
+}
+
+.info-area-wrapper {
+	@include info-container($pmWhite, $pmWhite);
+	padding-bottom: $distanceFromEdgeOfInfobox - 10;
+
+	p {
+		@include adjust-font-size-to(16px);
+	}
+
+	h2 {
+		color: $pmPink;
+		text-transform: uppercase;
+		@include adjust-font-size-to($sectionHeaderFontSize);
+	}
+
+	h2 > span {
+		color: $pmMediumGray;
+		text-transform: none;
+	}
+
+	h3 {
+		line-height: 1;
+	}
+
+	h3 > span {
+		@include adjust-font-size-to($base-font-size + 2);
+	}
+
+	> div > div:first-child, > nav > div:first-child {
+		margin-top: $distanceFromEdgeOfInfobox - 10;
+		margin-left: $distanceFromEdgeOfInfobox;
+	}
+
+	> div > div {
+		margin-top: $distanceFromEdgeOfInfobox - 10;
+	}
 }

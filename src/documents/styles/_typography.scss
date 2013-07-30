@@ -32,5 +32,7 @@ h4 {
 }
 
 a {
+	color: lighten($pmMediumGray2, 20%);
+	text-decoration: none;
 	font-family: $smallerHeadingsFontFamily;
 }

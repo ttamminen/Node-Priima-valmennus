@@ -1,32 +1,19 @@
-.name-and-title, .addresses, .social-media-links, .in-social-media-title {
-	@include span-columns(6, 12);
-}
-
-.addresses, .social-media-links {
-	@include omega;
-}
-
 .addresses {
 	@include box-sizing(border-box);
 }
 
 .in-social-media, .contact-information, .compose-message {
-	@include span-columns(12, 12);
 	@extend .info-area-wrapper;
 	@include box-sizing(border-box);
+	padding: 2em;
 }
 
 .social-media-links ul {
 	@include horizontal-list();
 
 	li {
-		@include span-columns(2, 6);
 		cursor: pointer;
 		padding: 0;
-		&.last-child {
-			@include omega;
-			@include post(2);
-		}
 	}
 
 	.facebook {
@@ -45,19 +32,7 @@
 .contact-form {
 	@include clearfix;
 
-	.customer-contact-information
-	{
-		@include span-columns(4, 12);
-	}
-
-	.message {
-		@include span-columns(5, 12);
-		@include suffix(1);
-	}
-
 	.submit {
-		@include span-columns(2, 12);
-		@include omega;
 		position: relative;
 		// TODO: can this be done in a better way
 		height: 180px;
