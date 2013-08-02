@@ -73,7 +73,6 @@
 	// header
 	.brand {
 		@include span-columns(2, 12);
-		@include suffix(4,12);
 	}
 
 	// main-page

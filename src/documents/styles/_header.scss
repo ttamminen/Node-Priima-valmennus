@@ -1,10 +1,11 @@
 nav.main {
-	@include span-columns(6 omega, 12);
+	@include span-columns(10 omega, 12);
 	padding-bottom: 14px;
 
 	ul {
 		@include horizontal-list;
 		@extend .clearfix;
+		float: right;
 
 		li {
 			a {

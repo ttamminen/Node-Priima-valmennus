@@ -71,6 +71,17 @@
 	}
 }
 
+.contact {
+	// moves text vertically, so that it will 
+	// be on the same line with the titles
+	@include padding-leader(1);
+}
+
+.social-media-links {
+	// TODO: calculate this some how
+	margin-top: 3.63816em;
+}
+
 /*.name-and-title {
 	@include columns(6);
 }
