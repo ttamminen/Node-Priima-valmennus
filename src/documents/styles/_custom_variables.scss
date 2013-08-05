@@ -23,6 +23,7 @@ $bodyBackgroundImage: url(#{$assetsPath}bg.jpg) $pmGray repeat 0 0;
 /* navigation */
 $navbarBackground: $pmGray;
 $navbarHeight: 115px;
+$mainNavigationTextColor: #555;
 
 /* divider */
 $distanceFromDivider: 25px;
@@ -47,20 +48,3 @@ $infoboxPadding: 15px;
 
 /* testimonials */
 $testimonialGivenByColor: $pmMediumGray3;
-
-/* text */
-/*$linkColor: #767676;
-$linkColorHover: #8f8f8f;
-
-$baseFontSize: 16px;
-$baseFontFamily: "MetaProBook", Arial, sans-serif;
-$textColor: $pmMediumGray;
-$headingsColor: $pmLightRed;
-$headingsFontWeight: normal;
-
-$marginBetweenBlocks: 4px;
-$distanceFromDivider: 25px;
-
-$dividerStyle: 1px solid $pmMediumGray;
-
-$errorColor: #EA5200;*/

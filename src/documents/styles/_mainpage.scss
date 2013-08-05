@@ -1,3 +1,5 @@
+$marginBetweenTiles: 4px;
+
 .social-media-updates {
 	@extend .infobox;
 	@include border-box();
@@ -5,11 +7,8 @@
 	font-family: $socialMediaUpdatesTitleFontFamily;
 	padding: 22px;
 
-	h4 {
+	h3 {
 		@include adjust-font-size-to($socialMediaUpdatesTitleFontSize);
-		font-family: $headingsFontFamily;
-		text-transform: uppercase;
-		color: $pmPink;
 		margin-top: 0px;
 	}
 
@@ -23,10 +22,7 @@
 		}
 	}
 
-	h5 {
-		@include adjust-font-size-to($socialMediaUpdateTitleFontSize);
-		color: $pmPink;
-		text-transform: uppercase;
+	h4.update-title {
 		margin: 0;
 	}
 
@@ -43,6 +39,7 @@
 .main-page-tiles {
 	a {
 		display: block;
+		line-height: 0; // removes extra space from the image
 	}
 }
 
@@ -70,12 +67,11 @@
 }
 
 .learn-swimming-technique {
-	@include span-columns(7);
-	@include omega;
+	@include span-columns(7 omega);
 }
 
-.main-promotion, .package-promotion {
-	margin-bottom: 4px;
+.main-promotion, .package-promotion, .training-session {
+	margin-bottom: $marginBetweenTiles;
 }
 
 /*$mainPageInfoboxPadding: 34px;

@@ -1,5 +1,13 @@
+.brand {
+	margin-top: 1em;
+
+	img {
+		width: auto;
+		height: auto;
+	}
+}
+
 nav.main {
-	@include span-columns(10 omega, 12);
 	padding-bottom: 14px;
 
 	ul {
@@ -27,58 +35,6 @@ nav.main ul li a {
 	float: left;
 	display: block;
 	text-decoration: none;
-	color: #555;
+	color: $mainNavigationTextColor;
 	padding: 73px 15px 11px 15px;
 }
-
-
-/*nav.main {
-	@extend .navbar;
-	@extend .navbar-fixed-top;
-}
-
-nav.main > div {
-	@extend .navbar-inner;
-	@include override_gradient_vertical();
-	@include no-box-shadow();
-	@include no-borders();
-
-	background: $bodyBackgroundImage;
-	padding-bottom: 14px;
-	border-bottom: $dividerStyle;
-
-	.brand {
-		width: 163px;
-		height: 77px;
-		padding: 0px;
-		margin-left: 0;
-		margin-top: 13px;
-		padding-right: 20px;
-	}
-}
-
-nav.main > div >  ul {
-	@extend .nav;
-	background: $bodyBackgroundImage;
-	float: right;
-}
-
-nav.main > div > ul > li {
-	background: $bodyBackgroundImage;
-
-	a {
-		background: url(/images/bg.jpg) repeat fixed 0 0;
-		padding-top: 73px;
-		padding-bottom: 11px;
-		text-shadow: none;
-	}
-
-	&.active, &.active:hover {
-		a {
-			background-image: none;
-			@include no-box-shadow();
-			background-color: $pmDarkGray;
-			color: $pmGray;
-		}
-	}
-}*/

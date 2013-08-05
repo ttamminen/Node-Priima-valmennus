@@ -22,6 +22,8 @@ h3 {
 	@include adjust-font-size-to($h3FontSize);
 	font-family: $headingsFontFamily;
 	color: $pmPink;
+	text-transform: uppercase;
+	font-weight: 200;
 }
 
 h4 {
@@ -29,6 +31,12 @@ h4 {
 	font-family: $smallerHeadingsFontFamily;
 	color: $pmMediumGray;
 	font-weight: 400;
+}
+
+h4.update-title {
+	@include adjust-font-size-to($socialMediaUpdateTitleFontSize);
+	color: $pmPink;
+	text-transform: uppercase;
 }
 
 a {

@@ -1,0 +1,16 @@
+.hidden {
+	display: none;
+}
+
+.error {
+	color: $errorColor;
+}
+
+.price {
+	color: $pmPink;
+}
+
+.read-more {
+	@extend .icons-read-more;
+	border: 0;
+}

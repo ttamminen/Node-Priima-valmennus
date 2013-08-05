@@ -37,7 +37,7 @@ section#main-page.page-content
         a(href='#priima-valmennus')
           img(src='images/training-session.jpg', alt='Personal Trainer opastamassa asiakasta')
       .social-media-updates
-        h4 Sosiaalisessa mediassa:
+        h3 Sosiaalisessa mediassa:
         ul.updates
 section#priima-valmennus.page-content
   header
@@ -80,55 +80,48 @@ section#priima-valmennus.page-content
         | Facebookissa
       .facebook-like
         .fb-like(data-href='https://www.facebook.com/PriimaValmennus', data-send='true', data-layout='button_count', data-width='180', data-show-faces='true', data-font='arial')
-    .cv-wrapper
-      .cv-photo
-        img(src='images/cv-photo.jpg', alt='Personal Trainer Vera Tamminen')
-      .title-content-wrapper
-        .title-wrapper
-          h4 Vera Tamminen, Liikuntatieteiden maisteri, Personal Trainer
-        div
-          img(src='images/cv.png', alt='Vera Tamminen CV')
+
+    .cv-photo
+      img(src='images/cv-photo.jpg', alt='Personal Trainer Vera Tamminen')
+    .cv      
+      h3 Vera Tamminen, Liikuntatieteiden maisteri, Personal Trainer
+      img(src='images/cv.png', alt='Vera Tamminen CV')
+
     .customer-feedback
-      .highlight-testimonial-and-leave-feedback-wrapper
-        .highlight-testimonial
+      .highlight-testimonial
+        p "Runsaan vuoden olemme tehneet yhteistyötä Veran kanssa ja yhteiset ryhmäliikuntatunnit ovat meillä Prismassa parantaneet työhyvinvointia sekä -tyytyväisyyttä. Palvelu on ollut mutkatonta ja tunnit ovat suunniteltu ajatellen kaupan alan työntekijöitä mm. niska-hartiajumppa. Tunneille voi osallistua kuka vaan iästä ja kunnosta riippumatta."
+          span.given-by Elina L.
+            span.separator //
+            | henkilöstöpäällikkö Prisma Kerava
+      .your-opinion
+        h3 Mielipiteesi on meille tärkeä
+        .give-feedback-wrapper
+          .give-feedback
           p
-            | "Runsaan vuoden olemme tehneet yhteistyötä Veran kanssa ja yhteiset ryhmäliikuntatunnit ovat meillä Prismassa parantaneet työhyvinvointia sekä -tyytyväisyyttä. Palvelu on ollut mutkatonta ja tunnit ovat suunniteltu ajatellen kaupan alan työntekijöitä mm. niska-hartiajumppa. Tunneille voi osallistua kuka vaan iästä ja kunnosta riippumatta."
+            | Haluamme kuulla palautteesi, jotta voimme kehittää toimintaamme entistä paremmaksi. Tämä onnistuu helposti palautelomakkeen kautta.
+            br
+            a(href='#contact') Anna palautetta »
+    .customer-satisfaction-first
+      h3 Asiakastyytyväisyys ensin
+      ul.testimonials
+        li
+          p
+            | "Oma-aloitteinen harjoitteluni kävi yksipuoliseksi eikä muutoksia tapahtunut. Aloitettuamme Veran kanssa yhteistyön tuloksia alkoi näkyä: lihasmassa kasvoi, rasva paloi ja ylimääräiset nesteet hävisivät. Ilman ohjausta ja tukea en olisi päässyt kehityksessäni näin huimasti eteenpäin."
             span.given-by
-              | Elina L.
+              | Maria J.
               span.separator //
-              | henkilöstöpäällikkö Prisma Kerava
-        .your-opinion
-          h4 Mielipiteesi on meille tärkeä
-          .give-feedback-wrapper
-            .give-feedback
-            p
-              | Haluamme kuulla palautteesi, jotta voimme kehittää toimintaamme entistä paremmaksi. Tämä onnistuu helposti palautelomakkeen kautta.
-              br
-              a(href='#contact') Anna palautetta »
-      .customer-satisfaction-first
-        .testimonial-header
-          h4 Asiakastyytyväisyys ensin
-        .testimonials
-          ul
-            li
-              p
-                | "Oma-aloitteinen harjoitteluni kävi yksipuoliseksi eikä muutoksia tapahtunut. Aloitettuamme Veran kanssa yhteistyön tuloksia alkoi näkyä: lihasmassa kasvoi, rasva paloi ja ylimääräiset nesteet hävisivät. Ilman ohjausta ja tukea en olisi päässyt kehityksessäni näin huimasti eteenpäin."
-                span.given-by
-                  | Maria J.
-                  span.separator //
-                  | nuorisotyöntekijä
-            li
-              p
-                | "Yhteistyö Veran kanssa ylitti kaikki odotukset.
-                | Vaikka olen aikaisemminkin liikkunut aktiivisesti, niin treenien
-                | monipuolisuus tuli silti yllätyksenä. Koen että neljä kuukautta kestäneen
-                | treenijakson jälkeen minulla on eväät huomattavasti tasapainoisempaan ja
-                | kokonaisvaltaisempaan harjoitteluun. Ainut asia mikä jäi harmittamaan on se, että
-                | en palkannut häntä jo aikaisemmin."
-                span.given-by
-                  | Mikko S.
-                  span.separator //
-                  | ohjelmistosuunnittelija
+              | nuorisotyöntekijä
+        li
+          p
+            | "Yhteistyö Veran kanssa ylitti kaikki odotukset.
+            | Vaikka olen aikaisemminkin liikkunut aktiivisesti, niin treenien
+            | monipuolisuus tuli silti yllätyksenä. Koen että neljä kuukautta kestäneen
+            | treenijakson jälkeen minulla on eväät huomattavasti tasapainoisempaan ja
+            | kokonaisvaltaisempaan harjoitteluun. Ainut asia mikä jäi harmittamaan on se, että
+            | en palkannut häntä jo aikaisemmin."
+            span.given-by Mikko S.
+              span.separator //
+              | ohjelmistosuunnittelija
 section#services-for-individuals.page-content
   header
     h2 Palvelut yksityisille

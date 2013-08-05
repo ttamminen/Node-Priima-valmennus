@@ -43,9 +43,13 @@ var App = (function() {
     			title = title.substring(0, textLength);
     			title = title + "...";
     		}
+			var $updateTitle = $('<h4>', { "class": "update-title" });
+			var titleText = creationTime.getDate() + '. ' + monthNames[creationTime.getMonth()];
+			$updateTitle.text(titleText);
+
     		var $link = $('<a>').attr('href', item.Uri).text(title);
 			var $update = $('<li>')
-    						.append('<h5>' + creationTime.getDate() + '. ' + monthNames[creationTime.getMonth()] + '</h5>')
+    						.append($updateTitle)
                             .append($link);
 
     		$updates.append($update);

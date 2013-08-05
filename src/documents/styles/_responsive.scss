@@ -4,6 +4,10 @@
 		@include span-columns(2, 12);
 	}
 
+	nav.main {
+		@include span-columns(10 omega, 12);
+	}
+
 	// main-page
 	.wrapper-first-half {
 		@include span-columns(12, 12);
@@ -21,6 +25,27 @@
 
 	.priima-valmennus-facebook {
 		@include span-columns(12, 12);
+	}
+
+	.cv-photo {
+		@include span-columns(0, 12);
+	}
+
+	.cv {
+		@include span-columns(12, 12);
+	}
+
+	.customer-feedback {
+		@include span-columns(12, 12);
+	}
+
+	.customer-satisfaction-first {
+		@include span-columns(12, 12);
+		@include remove-omega;
+	}
+
+	.customer-satisfaction-first {
+		@include span-columns(6 omega, 12);
 	}
 
 	// packages for individuals
@@ -66,6 +91,19 @@
 			height: 60px;
 		}
 	}
+
+	.customer-satisfaction-first {
+		@include span-columns(12, 12);
+		@include remove-omega;
+	}
+
+	.customer-feedback {
+		@include span-columns(12, 12);
+	}
+
+	.highlight-testimonial-and-leave-feedback-wrapper {
+		@include span-columns(12, 12);
+	}
 }
 
 // Desktop
@@ -75,14 +113,17 @@
 		@include span-columns(2, 12);
 	}
 
+	nav.main {
+		@include span-columns(10 omega, 12);
+	}
+
 	// main-page
 	.wrapper-first-half {
 		@include span-columns(8,12);
 	}
 
 	.wrapper-second-half {
-		@include span-columns(4, 12);
-		@include omega;
+		@include span-columns(4 omega, 12);
 	}
 
 	// priima-valmennus
@@ -93,6 +134,22 @@
 
     .priima-valmennus-facebook {
     	@include span-columns(3 omega, 12);
+	}
+
+	.cv-photo {
+		@include span-columns(3, 12);
+	}
+
+	.cv {
+		@include span-columns(9 omega, 12);
+	}
+
+	.customer-satisfaction-first {
+		@include span-columns(6 omega, 12);
+	}
+
+	.customer-feedback {
+		@include span-columns(6, 12);
 	}
 
 	// packages for individuals
@@ -139,8 +196,7 @@
 		}
 
 		.submit {
-			@include span-columns(2, 12);
-			@include omega;
+			@include span-columns(2 omega, 12);
 		}
 	}
 }
