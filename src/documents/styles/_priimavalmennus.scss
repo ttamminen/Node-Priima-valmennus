@@ -13,9 +13,15 @@ $highlightTestimonialPadding: 50px;
 
 .give-feedback {
 	@extend .icons-letter;
-	@include inline-block();
+	@include span-columns(2, 6);
+	/*@include inline-block();
 	position: relative;
-	margin-right: 39px;
+	margin-right: 39px;*/
+}
+
+.feedback-instructions {
+	@include span-columns(4, 6);
+	@include omega;
 }
 
 .priima-valmennus-facebook {
