@@ -155,6 +155,7 @@ var App = (function() {
 	}
 
 	app.init = function () {
+		var navigation = responsiveNav('#nav');
 		modernizrInit();
 		getUpdates();
 		initContactForm();

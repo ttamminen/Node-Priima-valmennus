@@ -3,12 +3,14 @@ $marginBetweenTiles: 4px;
 .social-media-updates {
 	@extend .infobox;
 	@include border-box();
+	min-height: 211px;
 	margin-top: 0;
 	font-family: $socialMediaUpdatesTitleFontFamily;
-	padding: 22px;
+	padding: 1em 1em 0.8 1em;
 
 	h3 {
 		@include adjust-font-size-to($socialMediaUpdatesTitleFontSize);
+		@include margin-trailer(0);
 		margin-top: 0px;
 	}
 
@@ -58,6 +60,8 @@ $marginBetweenTiles: 4px;
 	@extend .infobox;
 	@include border-box();
 	@include span-columns(5);
+	padding-top: 0.8em;
+	padding-bottom: 0.8em;
 	margin-top: 0;
 
 	img {
@@ -68,6 +72,11 @@ $marginBetweenTiles: 4px;
 
 .learn-swimming-technique {
 	@include span-columns(7 omega);
+
+	img {
+		max-width: 441px;
+		max-height: 291px;
+	}
 }
 
 .main-promotion, .package-promotion, .training-session {

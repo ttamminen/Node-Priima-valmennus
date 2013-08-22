@@ -27,10 +27,15 @@ $highlightTestimonialPadding: 50px;
 .priima-valmennus-facebook {
 	@extend .infobox;
 	@include box-sizing(border-box);
+	margin-top: 10%;
 
 	padding-top: $marginBetweenItems;
 	padding-bottom: $marginBetweenItems;
   	text-align: center;
+
+	p {
+		width: 100%;
+	}
 
   	button {
 		border: 0;
@@ -71,6 +76,11 @@ $highlightTestimonialPadding: 50px;
 	@include border-box();
 	padding: 0;
 	padding-left: 1em;
+
+	h3 {
+		@include adjust-font-size-to($h3FontSize - 1px);
+		line-height: 1em;
+	}
 }
 
 .given-by {
@@ -82,7 +92,7 @@ $highlightTestimonialPadding: 50px;
 }
 
 .customer-feedback {
-	margin-top: $distanceFromDivider;
+	margin-top: 2em;
 
 	.given-by {
 		color: $testimonialGivenByColor;
@@ -121,15 +131,19 @@ $highlightTestimonialPadding: 50px;
 
 .customer-satisfaction-first {
 	@include box-sizing(border-box);
-	padding-left: $distanceFromEdgeOfInfobox;
+	margin-top: 2em;
+	background-color: #ebebeb;
 
 	h3 {
 		background-color: $pmWhite;
+		padding: 1em;
+		margin: 0;
 	}
 
 	ul {
 		@include no-bullets();
 		background-color: $pmGray;
+		padding: 2em 2em 0em 2em;
 		font-style: italic;
 		margin: 0;
 	}
@@ -139,6 +153,8 @@ $highlightTestimonialPadding: 50px;
 
 	span {
 		color: $pmPink;
+		@include margin-leader(1);
+		@include margin-trailer(2);
 	}
 }
 

@@ -25,6 +25,7 @@
 
 	.priima-valmennus-facebook {
 		@include span-columns(12, 12);
+		@include remove-omega;
 	}
 
 	.cv-photo {
@@ -33,6 +34,7 @@
 
 	.cv {
 		@include span-columns(12, 12);
+		@include remove-omega;
 	}
 
 	.customer-feedback {
@@ -42,10 +44,6 @@
 	.customer-satisfaction-first {
 		@include span-columns(12, 12);
 		@include remove-omega;
-	}
-
-	.customer-satisfaction-first {
-		@include span-columns(6 omega, 12);
 	}
 
 	// packages for individuals
@@ -106,8 +104,8 @@
 	}
 }
 
-// Desktop
-@include at-breakpoint($desktop) {
+// tablet
+@include at-breakpoint($tablet) {
 	// header
 	.brand {
 		@include span-columns(2, 12);
@@ -128,8 +126,7 @@
 
 	// priima-valmennus
 	.company-information {
-		@include span-columns(8, 12);
-		@include suffix(1);
+		@include span-columns(9, 12);
 	}
 
     .priima-valmennus-facebook {
@@ -144,12 +141,13 @@
 		@include span-columns(9 omega, 12);
 	}
 
-	.customer-satisfaction-first {
-		@include span-columns(6 omega, 12);
+	.customer-feedback {
+		@include span-columns(12, 12);
 	}
 
-	.customer-feedback {
-		@include span-columns(6, 12);
+	.customer-satisfaction-first {
+		@include span-columns(12, 12);
+		@include remove-omega;
 	}
 
 	// packages for individuals
@@ -199,4 +197,143 @@
 			@include span-columns(2 omega, 12);
 		}
 	}
+}
+
+// Desktop
+@include at-breakpoint($desktop) {
+	// header
+	.brand {
+		@include span-columns(2, 12);
+	}
+
+	nav.main {
+		@include span-columns(10 omega, 12);
+	}
+
+	// main-page
+	.wrapper-first-half {
+		@include span-columns(8,12);
+	}
+
+	.wrapper-second-half {
+		@include span-columns(4 omega, 12);
+	}
+
+	// priima-valmennus
+	.company-information {
+		@include span-columns(8, 12);
+		@include suffix(1);
+	}
+
+    .priima-valmennus-facebook {
+    	@include span-columns(3 omega, 12);
+	}
+
+	.cv-photo {
+		@include span-columns(3, 12);
+	}
+
+	.cv {
+		@include span-columns(9 omega, 12);
+	}
+
+	.customer-feedback {
+		clear: left;
+		@include span-columns(6, 12);
+	}
+
+	.customer-satisfaction-first {
+		@include span-columns(6 omega, 12);
+	}
+
+	// packages for individuals
+	.package {
+		@include span-columns(4, 12);
+	}
+
+	.package:last-child {
+		@include omega;
+	}
+
+	// contact
+	.in-social-media, .contact-information, .compose-message {
+		@include span-columns(12, 12);
+	}
+
+	.social-media-links ul {
+		li {
+			@include span-columns(2, 6);
+			&.last-child {
+				@include omega;
+				@include post(2);
+			}
+		}
+	}
+
+	.name-and-title, .addresses, .social-media-links, .in-social-media-title {
+		@include span-columns(6, 12);
+	}
+
+	.addresses, .social-media-links {
+		@include omega;
+	}
+
+	.contact-form {
+		.customer-contact-information
+		{
+			@include span-columns(4, 12);
+		}
+
+		.message {
+			@include span-columns(5, 12);
+			@include suffix(1);
+		}
+
+		.submit {
+			@include span-columns(2 omega, 12);
+		}
+	}
+}
+
+/*! responsive-nav.js v1.0.16 by @viljamis */
+#nav ul {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: block;
+	list-style: none;
+}
+
+#nav li {
+	/*width: 100%;
+	display: block;*/
+}
+
+.js #nav {
+	clip: rect(0 0 0 0);
+	max-height: 0;
+	position: absolute;
+	display: block;
+	overflow: hidden;
+	zoom: 1;
+}
+
+#nav.opened {
+	max-height: 9999px;
+}
+
+@media screen and (min-width: 44em) {
+	.js #nav {
+		position: relative;
+	}
+	.js #nav.closed {
+		max-height: none;
+	}
+	#nav-toggle {
+		display: none;
+	}
+}
+
+#nav-toggle {
+	float: right;
 }

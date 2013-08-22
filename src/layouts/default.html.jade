@@ -9,6 +9,7 @@
 - scripts.add(["/vendor/scrollTo.js"])
 - scripts.add(["/vendor/localScroll.js"])
 - scripts.add(["/vendor/validate.js"])
+- scripts.add(["/vendor/responsive-nav.js"])
 
 // head scripts
 //- headscripts.add(["/vendor/modernizr.js"])
@@ -81,18 +82,18 @@ html(class='no-js', lang='fi')
           div.brand
             a(href='#')
               img(src='/images/logo.png', alt='Priima-valmennus logo')
-          nav.main
+          nav.main#nav
             ul
-              li.active
-                a(href='#main-page') Etusivu
-              li
-                a(href='#priima-valmennus') Priima-valmennus
-              li
-                a(href='#services-for-individuals') Palvelut yksityisille
               //
                 <li><a href="#services-for-companies">Palvelut yrityksille</a></li>
               li
                 a(href='#contact') Yhteys
+              li
+                a(href='#services-for-individuals') Palvelut yksityisille
+              li
+                a(href='#priima-valmennus') Priima-valmennus
+              li.active
+                a(href='#main-page') Etusivu
 
       .main-content
         div

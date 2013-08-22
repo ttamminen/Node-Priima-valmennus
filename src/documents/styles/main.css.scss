@@ -26,9 +26,9 @@ $column-width   : 5em;            // each column is 4em wide
 $gutter-width   : 1em;            // 1em gutters between columns
 $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 $show-grid-backgrounds: true;
-$tablet: 4;
+$tablet: 6;
 $desktop: 12;
-$mobile: 2;
+$mobile: 4;
 
 @import "custom_variables";
 
@@ -77,7 +77,7 @@ img {
 
 #page {
 	@include container($total-columns, 12);
-	@include susy-grid-background;
+	//@include susy-grid-background;
 }
 
 .main-content {
@@ -105,10 +105,10 @@ header.site {
 }
 
 // this needs to be defined here because mainpage.scss would be too early
-@include grid-settings(12, 80px, 4px, 4px) {
+@include grid-settings(12, 84px, 4px, 4px) {
 	.main-page-tiles {
 		@include container();
-		@include susy-grid-background;
+		//@include susy-grid-background;
 	}
 
 	.wrapper-first-half {

@@ -3,8 +3,15 @@ $h2ContentFontSize: 28px;
 $h3FontSize: 28px;
 $h4FontSize: 24px;
 
-section > header > h2, section > header > h1 {
+section > header > h1 {
+	@include adjust-font-size-to($sectionHeaderFontSize - 2px);
+}
+
+section > header > h2 {
 	@include adjust-font-size-to($sectionHeaderFontSize);
+}
+
+section > header > h2, section > header > h1 {
 	font-family: $headingsFontFamily;
 	color: $pmLightBlue;
 	text-transform: uppercase;
