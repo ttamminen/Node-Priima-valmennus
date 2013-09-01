@@ -1,6 +1,32 @@
 var App = (function() {
 	var app = {};
 
+	function responsiveInit() {
+		enquire.register("screen and (min-width: 577px)", {
+		    match : function() {
+		    	var $services = $('#services-for-individuals');
+				var $packages = $services.find('.package, .last-package');
+				var $moreInfo = $services.find('.more-information-about-package:first');
+				$packages.find('.more-information-about-package').remove();
+				$services.find('.last-package').after($moreInfo);
+
+				bindInfoboxEvents();
+		    }
+		}, true);
+
+		enquire.register("screen and (max-width: 576px)", {
+		    match : function() {
+				var $services = $('#services-for-individuals');
+				var $moreInfo = $services.find('.more-information-about-package');
+				$services.find('.more-information-about-package').remove();
+				var $packages = $services.find('.package, .last-package');
+				$packages.append($moreInfo);
+
+				bindInfoboxEvents();
+		    }
+		});
+	}
+
 	function modernizrInit() {
 		if( !($('html').hasClass('boxsizing')) ){
 	        $('.box-sized, .box-sized *').each(function(){
@@ -19,6 +45,18 @@ var App = (function() {
 	            $(this).css('height',newH);
 	        });
 	    }
+
+		Modernizr.load([
+		    //first test need for polyfill
+		    {
+		        test: window.matchMedia,
+		        nope: ["vendor/mediaMatch.js", "vendor/respond.js"],
+		        both: "vendor/enquire.js",
+		        complete: function () {
+					responsiveInit();
+		        }
+		    }
+		]);
 	}
 
 	function renderUpdates(results) {
@@ -100,8 +138,11 @@ var App = (function() {
 	}
 
 	function bindInfoboxEvents() {
+		unbindInfoboxEvents();
+
 		var $services = $('#services-for-individuals');
-		var $infos = $services.find('.more-infomation-about-package').find('.infobox');
+		var $moreInformationAboutPackage = $services.find('.more-information-about-package');
+		var $infos = $moreInformationAboutPackage.find('.infobox');
 		var $readMores = $services.find('.read-more');
 		var $closeButtons = $services.find('.close-button');
 
@@ -110,11 +151,20 @@ var App = (function() {
 			$readMores.show('fade');
 			$button.hide('fade');
 			var target = $button.attr('target');
-			$infos.hide('slide');
-			$('#' + target).show('slide');
+
+			var $moreInformationNextToPackage = $button.parent().find('.more-information-about-package');
+			if($moreInformationNextToPackage.length === 1)
+			{
+				$moreInformationNextToPackage.find('.infobox').hide();
+				$moreInformationNextToPackage.find('#' + target).show('slide');
+			}
+			else
+			{
+				$infos.hide('slide');
+				$moreInformationAboutPackage.find('#' + target).show('slide');
+			}
 
 			var packageName = $button.attr('package-name');
-
 			_gaq.push(['_trackEvent', 'Paketit yksityisille', packageName]);
 		});
 
@@ -122,6 +172,14 @@ var App = (function() {
 			$readMores.show('fade');
 			$infos.hide('slide');
 		});
+	}
+
+	function unbindInfoboxEvents() {
+    	var $services = $('#services-for-individuals');
+		var $readMores = $services.find('.read-more');
+		var $closeButtons = $services.find('.close-button');
+		$readMores.unbind('click');
+		$closeButtons.unbind('click');
 	}
 
 	function setEffects() {
@@ -155,7 +213,6 @@ var App = (function() {
 	}
 
 	app.init = function () {
-		var navigation = responsiveNav('#nav');
 		modernizrInit();
 		getUpdates();
 		initContactForm();

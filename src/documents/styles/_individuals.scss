@@ -1,10 +1,21 @@
-.more-infomation-about-package {
+.more-information-about-package {
 	@include span-columns(12, 12);
-	height: 200px;
 }
 
 .process {
 	@include span-columns(12, 12);
 	text-align: center;
 	margin-bottom: $distanceFromDivider;
+}
+
+.package {
+	margin-bottom: 1em;
+
+	> ul {
+		margin-bottom: 2em;
+	}
+}
+
+.process {
+	margin-top: 1em;
 }

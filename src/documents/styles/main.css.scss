@@ -64,11 +64,8 @@ $base-line-height: 6px;
 body {
 	font-family: $baseFontFamily;
 	background: $bodyBackgroundImage;
-	@include adjust-leading-to(4);
-}
-
-p {
 	color: $textColor;
+	@include adjust-leading-to(4);
 }
 
 img {
@@ -94,7 +91,6 @@ header.site {
 	top: 0;
 	left: 0%;
 	right: 0%;
-	height: $navbarHeight;
 	z-index: 1000;
 
 	> div {

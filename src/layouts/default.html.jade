@@ -9,7 +9,6 @@
 - scripts.add(["/vendor/scrollTo.js"])
 - scripts.add(["/vendor/localScroll.js"])
 - scripts.add(["/vendor/validate.js"])
-- scripts.add(["/vendor/responsive-nav.js"])
 
 // head scripts
 //- headscripts.add(["/vendor/modernizr.js"])
@@ -82,25 +81,23 @@ html(class='no-js', lang='fi')
           div.brand
             a(href='#')
               img(src='/images/logo.png', alt='Priima-valmennus logo')
-          nav.main#nav
+          nav.main
             ul
               //
                 <li><a href="#services-for-companies">Palvelut yrityksille</a></li>
+              li.active
+                a(href='#main-page') Etusivu
               li
-                a(href='#contact') Yhteys
+                a(href='#priima-valmennus') Priima-valmennus
               li
                 a(href='#services-for-individuals') Palvelut yksityisille
               li
-                a(href='#priima-valmennus') Priima-valmennus
-              li.active
-                a(href='#main-page') Etusivu
+                a(href='#contact') Yhteystiedot
 
       .main-content
         div
           != content
 
-    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
-    script.
-      window.jQuery || document.write('<script src="/vendor/jquery.js"><\\/script>')
+    <script src="/vendor/jquery.js"></script>
 
     != scripts.toHTML()

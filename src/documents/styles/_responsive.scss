@@ -1,3 +1,43 @@
+// responsive navigation
+/* tablets and desktop */
+@media only screen and (min-width: 765px) {
+	header.site {
+		> div {
+			height: $navbarHeight;
+		}
+	}
+
+	nav.main ul li {
+		width: auto;
+
+		a {
+			padding-top: 73px;
+			float: right;
+			@include adjust-font-size-to($base-font-size);
+		}
+	}
+}
+
+/* phones */
+@media only screen and (max-width: 764px) {
+	header.site {
+		> div {
+			height: $navbarHeight + 30px;
+		}
+	}
+
+	nav.main ul li
+	{
+		width: 100%;
+
+		a {
+			padding: 0.5em;
+			float: right;
+			line-height: 1;
+		}
+	}
+}
+
 @include at-breakpoint($mobile){
 	// header
 	.brand {
@@ -51,16 +91,22 @@
 		@include span-columns(12, 12);
 	}
 
-	.package:last-child {
+	.last-package {
+		@extend .package;
 		@include remove-omega;
 	}
 
 	// contact
-	.social-media-links ul {
-		li {
-			@include span-columns(6, 6);
-			&.last-child {
-				@include remove-omega;
+	.social-media-links {
+		margin-top: 0;
+		margin-bottom: 2em;
+
+		ul {
+			li {
+				@include span-columns(6, 6);
+				&.last-child {
+					@include remove-omega;
+				}
 			}
 		}
 	}
@@ -107,6 +153,8 @@
 // tablet
 @include at-breakpoint($tablet) {
 	// header
+
+
 	.brand {
 		@include span-columns(2, 12);
 	}
@@ -122,6 +170,12 @@
 
 	.wrapper-second-half {
 		@include span-columns(4 omega, 12);
+	}
+
+	.social-media-updates {
+		> h3 {
+			@include adjust-font-size-to($socialMediaUpdatesTitleFontSize * 0.8);
+		}
 	}
 
 	// priima-valmennus
@@ -142,12 +196,12 @@
 	}
 
 	.customer-feedback {
-		@include span-columns(12, 12);
+		clear: left;
+		@include span-columns(6, 12);
 	}
 
 	.customer-satisfaction-first {
-		@include span-columns(12, 12);
-		@include remove-omega;
+		@include span-columns(6 omega, 12);
 	}
 
 	// packages for individuals
@@ -155,7 +209,8 @@
 		@include span-columns(4, 12);
 	}
 
-	.package:last-child {
+	.last-package {
+		@extend .package;
 		@include omega;
 	}
 
@@ -164,12 +219,15 @@
 		@include span-columns(12, 12);
 	}
 
-	.social-media-links ul {
-		li {
-			@include span-columns(2, 6);
-			&.last-child {
-				@include omega;
-				@include post(2);
+	.social-media-links {
+		margin-top: 3.63816em;
+
+		ul {
+			li {
+				@include span-columns(3, 6);
+				&.last-child {
+					@include omega;
+				}
 			}
 		}
 	}
@@ -219,6 +277,15 @@
 		@include span-columns(4 omega, 12);
 	}
 
+	.social-media-links {
+		margin-top: 3.63816em;
+
+		> h3 {
+			@include adjust-font-size-to($socialMediaUpdatesTitleFontSize);
+			@include margin-trailer(0);
+		}
+	}
+
 	// priima-valmennus
 	.company-information {
 		@include span-columns(8, 12);
@@ -251,7 +318,8 @@
 		@include span-columns(4, 12);
 	}
 
-	.package:last-child {
+	.last-package {
+		@extend .package;
 		@include omega;
 	}
 
@@ -293,47 +361,4 @@
 			@include span-columns(2 omega, 12);
 		}
 	}
-}
-
-/*! responsive-nav.js v1.0.16 by @viljamis */
-#nav ul {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	display: block;
-	list-style: none;
-}
-
-#nav li {
-	/*width: 100%;
-	display: block;*/
-}
-
-.js #nav {
-	clip: rect(0 0 0 0);
-	max-height: 0;
-	position: absolute;
-	display: block;
-	overflow: hidden;
-	zoom: 1;
-}
-
-#nav.opened {
-	max-height: 9999px;
-}
-
-@media screen and (min-width: 44em) {
-	.js #nav {
-		position: relative;
-	}
-	.js #nav.closed {
-		max-height: none;
-	}
-	#nav-toggle {
-		display: none;
-	}
-}
-
-#nav-toggle {
-	float: right;
 }
