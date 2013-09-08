@@ -41,11 +41,16 @@
 @include at-breakpoint($mobile){
 	// header
 	.brand {
-		@include span-columns(2, 12);
+		@include span-columns(5, 12);
+
+		img {
+			width: 100%;
+			max-width: 163px;
+		}
 	}
 
 	nav.main {
-		@include span-columns(10 omega, 12);
+		@include span-columns(7 omega, 12);
 	}
 
 	// main-page
@@ -150,17 +155,32 @@
 	}
 }
 
-// tablet
-@include at-breakpoint($tablet) {
-	// header
-
-
+// retina
+@media only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (                min-resolution: 192dpi) and (min-width: 320px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 320px) {
 	.brand {
-		@include span-columns(2, 12);
+		@include span-columns(1, 12);
 	}
 
 	nav.main {
-		@include span-columns(10 omega, 12);
+		@include span-columns(11 omega, 12);
+	}
+}
+
+
+// tablet
+@include at-breakpoint($tablet) {
+	// header
+	.brand {
+		@include span-columns(3, 12);
+	}
+
+	nav.main {
+		@include span-columns(9 omega, 12);
 	}
 
 	// main-page

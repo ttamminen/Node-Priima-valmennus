@@ -2,6 +2,8 @@
 - var styles = getBlock('styles')
 
 // scripts
+- scripts.add(["/vendor/jquery.js"])
+- scripts.add(["/vendor/respond.js"])
 - scripts.add(["/scripts/main.js"])
 - scripts.add(["/scripts/app.js"])
 - scripts.add(["/scripts/cryptography.js"])
@@ -9,9 +11,6 @@
 - scripts.add(["/vendor/scrollTo.js"])
 - scripts.add(["/vendor/localScroll.js"])
 - scripts.add(["/vendor/validate.js"])
-
-// head scripts
-//- headscripts.add(["/vendor/modernizr.js"])
 
 // styles
 - styles.add(["/styles/main.css"])
@@ -45,7 +44,7 @@ html(class='no-js', lang='fi')
     meta(name="author", content=site.author || '')
 
     != styles.toHTML()
-    //!= headscripts.toHTML()
+
     script(src='/vendor/modernizr.js')
 
     script(type='text/javascript').
@@ -97,7 +96,5 @@ html(class='no-js', lang='fi')
       .main-content
         div
           != content
-
-    <script src="/vendor/jquery.js"></script>
 
     != scripts.toHTML()

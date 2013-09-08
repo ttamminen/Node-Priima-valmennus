@@ -1,11 +1,19 @@
 @font-face {
-  	font-family: 'Helvetica Neue';
-  	src: url('/fonts/otf/HelveticaNeueLTStd-Th.otf?') format('eot'), url('/fonts/woff/HelveticaNeueLTStd-Th.woff') format('woff'), url('/fonts/ttf/HelveticaNeueLTStd-Th.ttf') format('truetype');
+	font-family: 'Helvetica Neue';
+	src: url('/fonts/eot/HelveticaNeueLTStd-Th.eot');
+	src: url('/fonts/eot/HelveticaNeueLTStd-Th.eot?#iefix') format('embedded-opentype'),
+	     url('/fonts/woff/HelveticaNeueLTStd-Th.woff') format('woff'),
+	     url('/fonts/ttf/HelveticaNeueLTStd-Th.ttf')  format('truetype');
+	font-style: normal;
+	font-weight: 200;
 }
 
 @font-face {
 	font-family: 'MetaProBook';
-	src: url('/fonts/otf/MetaPro-BookItalic.otf?') format('eot'), url('/fonts/woff/MetaPro-BookItalic.woff') format('woff'), url('/fonts/ttf/MetaPro-BookItalic.ttf') format('truetype');
+	src: url('/fonts/eot/MetaPro-BookItalic.eot');
+	src: url('/fonts/eot/MetaPro-BookItalic.eot?#iefix') format('eot'),
+		 url('/fonts/woff/MetaPro-BookItalic.woff') format('woff'),
+		 url('/fonts/ttf/MetaPro-BookItalic.ttf') format('truetype');
 	font-style: italic, oblique;
 }
 

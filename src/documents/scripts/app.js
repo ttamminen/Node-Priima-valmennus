@@ -50,8 +50,8 @@ var App = (function() {
 		    //first test need for polyfill
 		    {
 		        test: window.matchMedia,
-		        nope: ["vendor/mediaMatch.js", "vendor/respond.js"],
-		        both: "vendor/enquire.js",
+		        nope: ["vendor/mediaMatch.js"],
+		        both: ["vendor/enquire.js"],
 		        complete: function () {
 					responsiveInit();
 		        }
