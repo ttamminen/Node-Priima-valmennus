@@ -10,7 +10,14 @@
     "docpad": "~6.51.6",
     "docpad-plugin-sass": "~2.6.0",
     "docpad-plugin-jade": "~2.4.1",
-    "docpad-plugin-livereload": "~2.5.3"
+    "docpad-plugin-livereload": "~2.5.3",
+    "safeps": "~2.2.7",
+    "grunt": "~0.4.1",
+    "bal-util": "~2.3.0",
+    "underscore": "~1.5.2",
+    "grunt-css": "~0.5.4",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-cli": "~0.1.9"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {

@@ -2,15 +2,7 @@
 - var styles = getBlock('styles')
 
 // scripts
-- scripts.add(["/vendor/jquery.js"])
-- scripts.add(["/vendor/respond.js"])
-- scripts.add(["/scripts/main.js"])
-- scripts.add(["/scripts/app.js"])
-- scripts.add(["/scripts/cryptography.js"])
-- scripts.add(["/vendor/flexslider.js"])
-- scripts.add(["/vendor/scrollTo.js"])
-- scripts.add(["/vendor/localScroll.js"])
-- scripts.add(["/vendor/validate.js"])
+- scripts.add(["/scripts/all.min.js"])
 
 // styles
 - styles.add(["/styles/main.css"])
@@ -45,7 +37,7 @@ html(class='no-js', lang='fi')
 
     != styles.toHTML()
 
-    script(src='/vendor/modernizr.js')
+    script(src='/scripts/modernizr.min.js')
 
     script(type='text/javascript').
       var _gaq = _gaq || [];
