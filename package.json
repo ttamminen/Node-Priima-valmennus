@@ -7,7 +7,7 @@
     "npm": "1.2"
   },
   "dependencies": {
-    "docpad": "~6.51.6",
+    "docpad": "~6.52.1",
     "docpad-plugin-sass": "~2.6.0",
     "docpad-plugin-jade": "~2.4.1",
     "docpad-plugin-livereload": "~2.5.3",
@@ -23,5 +23,7 @@
   "scripts": {
     "start": "node_modules/docpad/bin/docpad-server"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "grunt-contrib-cssmin": "~0.6.1"
+  }
 }

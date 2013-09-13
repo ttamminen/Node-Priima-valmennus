@@ -59,6 +59,10 @@
 		display: block;
 	}
 
+	textarea {
+		border: 2px solid rgba(127,127,127,0.4);
+	}
+
 	input[type="submit"] {
 		@extend .icons-btn-submit;
 		border: 0;
