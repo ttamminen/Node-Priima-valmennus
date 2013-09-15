@@ -98,7 +98,7 @@ $highlightTestimonialPadding: 50px;
 	}
 
 	span.separator {
-		display: inline-block;
+		@include inline-block;
 		letter-spacing: -3px;
 		margin-right: 3px;
 	}
@@ -123,7 +123,7 @@ $highlightTestimonialPadding: 50px;
 		position: relative;
 
 		p {
-			@include inline-block();
+			@include inline-block;
 		}
 	}
 }

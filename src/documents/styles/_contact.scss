@@ -69,7 +69,7 @@
 	}
 
 	label.name {
-		display: inline-block;
+		@include inline-block;
 		width: 35%;
 		padding-right: 10%;
 	}

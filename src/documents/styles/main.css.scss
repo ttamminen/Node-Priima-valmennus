@@ -58,6 +58,7 @@ $mobile: 4;
 @import "contact";
 
 @import "responsive";
+@import "retina";
 
 /* sprites */
 $icons-sprite-dimensions: true;
@@ -77,7 +78,20 @@ body {
 }
 
 img {
+	/* Part 1: Set a maxium relative to the parent */
+	max-width: 100%;
+
+	/* IE7-8 need help adjusting responsive images */
+	width: auto\9;
+
 	width: 100%;
+
+	/* Part 2: Scale the height according to the width, otherwise you get stretching */
+	height: auto;
+
+	vertical-align: middle;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
 }
 
 #page {

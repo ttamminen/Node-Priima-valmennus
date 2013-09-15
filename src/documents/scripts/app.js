@@ -124,9 +124,10 @@ var App = (function() {
 
 	function initJQueryPlugins() {
 		$('.flexslider').flexslider({
-			animation: 'slide',
+			animation: 'swing',
 			controlsContainer: ".flexslider",
 	    	controlNav: true,
+	    	directionNav: false,
 			manualControls: '.controls > ul > li'
 		});
 

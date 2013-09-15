@@ -1,52 +1,54 @@
 // responsive navigation
+
 /* tablets and desktop */
 @media only screen and (min-width: 765px) {
-	header.site {
-		> div {
-			height: $navbarHeight;
-		}
-	}
+	nav.main {
+		ul {
+			width: auto;
 
-	nav.main ul li {
-		width: auto;
+			li {
+				width: auto;
 
-		a {
-			padding-top: 73px;
-			float: right;
-			@include adjust-font-size-to($base-font-size);
+				a {
+					padding-top: 73px;
+					float: right;
+					@include adjust-font-size-to($base-font-size);
+				}
+			}
 		}
 	}
 }
 
 /* phones */
 @media only screen and (max-width: 764px) {
-	header.site {
-		> div {
-			height: $navbarHeight + 30px;
+	nav.main {
+		ul {
+			width: 150px;
+
+			li {
+				width: 100%;
+
+				a {
+					padding: 0.4em;
+					float: right;
+					line-height: 1;
+				}
+			}
 		}
 	}
+}
 
-	nav.main ul li
-	{
-		width: 100%;
-
-		a {
-			padding: 0.5em;
-			float: right;
-			line-height: 1;
+/* phones */
+@media only screen and (max-width: 480px) {
+	nav.main {
+		ul {
+			width: 120px;
 		}
 	}
 }
 
 @include at-breakpoint($mobile){
 	// header
-	.brand {
-		@include span-columns(5, 12);
-	}
-
-	nav.main {
-		@include span-columns(7 omega, 12);
-	}
 
 	// main-page
 	.wrapper-first-half {
@@ -84,6 +86,10 @@
 	.customer-satisfaction-first {
 		@include span-columns(12, 12);
 		@include remove-omega;
+	}
+
+	.give-feedback {
+		height: 45px;
 	}
 
 	// packages for individuals
@@ -150,33 +156,9 @@
 	}
 }
 
-// retina
-@media only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
-only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
-only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
-only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
-only screen and (                min-resolution: 192dpi) and (min-width: 320px),
-only screen and (                min-resolution: 2dppx)  and (min-width: 320px) {
-	.brand {
-		@include span-columns(1, 12);
-	}
-
-	nav.main {
-		@include span-columns(11 omega, 12);
-	}
-}
-
-
 // tablet
 @include at-breakpoint($tablet) {
 	// header
-	.brand {
-		@include span-columns(3, 12);
-	}
-
-	nav.main {
-		@include span-columns(9 omega, 12);
-	}
 
 	// main-page
 	.wrapper-first-half {
@@ -274,13 +256,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 // Desktop
 @include at-breakpoint($desktop) {
 	// header
-	.brand {
-		@include span-columns(2, 12);
-	}
-
-	nav.main {
-		@include span-columns(10 omega, 12);
-	}
 
 	// main-page
 	.wrapper-first-half {

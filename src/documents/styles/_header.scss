@@ -1,4 +1,11 @@
+header.site {
+	> div {
+		height: $navbarHeight;
+	}
+}
+
 .brand {
+	@include inline-block;
 	margin-top: 1em;
 
 	img {
@@ -9,6 +16,8 @@
 }
 
 nav.main {
+	@include inline-block(top);
+	float: right;
 	padding-bottom: 14px;
 
 	ul {
