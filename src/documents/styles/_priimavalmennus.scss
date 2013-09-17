@@ -9,6 +9,11 @@ $highlightTestimonialPadding: 50px;
 	margin-bottom: 2em;
 
 	> li {
+		a {
+			text-decoration: underline;
+			color: $pmPink;
+		}
+
 		@include adjust-font-size-to($base-font-size + 2);
 	}
 }
