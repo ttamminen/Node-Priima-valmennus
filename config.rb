@@ -2,10 +2,10 @@ require 'susy'
 
 # Set this to the root of your project when deployed:
 css_dir = 'out/styles'
-sass_dir = 'src/documents/styles'
-images_dir = 'src/documents/images' #'app/images'
+sass_dir = 'src/render/styles'
+images_dir = 'src/render/images' #'app/images'
 http_images_dir = 'app/images'
-generated_images_dir = "src/documents/images/sprites"
+generated_images_dir = "src/render/images/sprites"
 http_generated_images_path = "/images/sprites"
 javascripts_dir = 'temp/scripts'
 fonts_dir = 'app/fonts'
