@@ -1,0 +1,11 @@
+--- yaml
+layout: 'default'
+title: 'Tuusula - Personal Trainer palvelut'
+---
+
+- var kml = "https://maps.google.fi/maps/ms?authuser=0&vps=3&ie=UTF8&msa=0&output=kml&msid=214775384445131649957.0004e84f9f0241440765c"
+- var city = "Tuusula"
+- var content = ""
+- var myContent = partial("city", { "kmlUrl": kml, "city": city, "content": content })
+
+!= myContent

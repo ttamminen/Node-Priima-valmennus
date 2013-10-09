@@ -1,0 +1,20 @@
+script(src="http://maps.googleapis.com/maps/api/js?sensor=false")
+
+!= partial('tiles.html.jade', {})
+
+script.
+  // initializes city specific map. Sets kml javascript variable to point kml data provided to the partial
+  kml="#{kmlUrl}"
+
+section#priima-valmennus-kerava.page-content
+  header
+    h1 Priima-valmennus - #{city}
+
+  article.training-information-at-location
+    section
+      h4 Personal Trainer palvelut yksityisille
+      p= content
+
+  div.map
+    div#map-canvas
+    div#capture

@@ -7,10 +7,11 @@
   				"out/vendor/validate.js",
   				"out/vendor/scrollTo.js",
   				"out/vendor/flexslider.js",
-  				"out/vendor/localScroll.js",  				
+  				"out/vendor/localScroll.js",
   				"out/scripts/app.js",
   				"out/scripts/cryptography.js",
-  				"out/scripts/main.js"
+  				"out/scripts/main.js",
+          "out/scripts/map.js"
 			  ]
 		  }
   	},

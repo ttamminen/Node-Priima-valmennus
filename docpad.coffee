@@ -7,7 +7,7 @@ docpadConfig = {
     # Specify some site properties
     site:
       # The production url of our website
-      url: "http://www.priimavalmennus.fi"
+      url: "http://priimavalmennus.fi"
 
       # The default title of our website
       title: "Priima-valmennus"

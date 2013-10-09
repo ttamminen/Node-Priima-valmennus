@@ -50,8 +50,8 @@ var App = (function() {
 		    //first test need for polyfill
 		    {
 		        test: window.matchMedia,
-		        nope: ["vendor/mediaMatch.js"],
-		        both: ["vendor/enquire.js"],
+		        nope: ["/vendor/mediaMatch.js"],
+		        both: ["/vendor/enquire.js"],
 		        complete: function () {
 					responsiveInit();
 		        }
@@ -105,6 +105,10 @@ var App = (function() {
 
 	function initContactForm() {
 		var $contactForm = $('.contact-form');
+		if($contactForm.length <= 0) {
+			return;
+		}
+
 		$contactForm.validate({
 			messages: {
 	            Field214: "Täytäthän etunimesi",
@@ -213,6 +217,14 @@ var App = (function() {
 		});
 	}
 
+	function renderMap() {
+		if (typeof kml === "undefined") {
+			return;
+		}
+
+		Map.initialize(kml);
+	}
+
 	app.init = function () {
 		modernizrInit();
 		getUpdates();
@@ -222,6 +234,7 @@ var App = (function() {
 		setEffects();
 		decryptEmailAddress();
 		bindEventsToNavigation();
+		renderMap();
 	};
 
 	return app;

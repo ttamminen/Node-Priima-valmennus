@@ -30,6 +30,7 @@ $marginBetweenTiles: 4px;
 
 	a {
 		@include adjust-font-size-to($socialMediaUpdateFontSize);
+		text-decoration: none;
 		color: $pmMediumGray2;
 
 		&:hover {
