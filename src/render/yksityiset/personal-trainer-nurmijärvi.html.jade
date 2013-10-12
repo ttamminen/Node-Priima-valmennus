@@ -2,3 +2,10 @@
 layout: 'default'
 title: 'Nurmijärvi - Personal Trainer palvelut'
 ---
+
+- var kml = ""
+- var city = "Nurmijärvi"
+- var content = ""
+- var cityContent = partial("city", { "kmlUrl": kml, "city": city, "content": content })
+
+!= cityContent

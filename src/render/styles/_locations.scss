@@ -1,9 +1,4 @@
-.training-information-at-location {
-	@include span-columns(6, 12);
-}
-
 .map {
-	@include span-columns(6 omega, 12);
 	height: 400px;
 }
 

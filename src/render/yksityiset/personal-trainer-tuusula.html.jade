@@ -5,7 +5,10 @@ title: 'Tuusula - Personal Trainer palvelut'
 
 - var kml = "https://maps.google.fi/maps/ms?authuser=0&vps=3&ie=UTF8&msa=0&output=kml&msid=214775384445131649957.0004e84f9f0241440765c"
 - var city = "Tuusula"
-- var content = ""
-- var myContent = partial("city", { "kmlUrl": kml, "city": city, "content": content })
+- var content = "Priima-valmennus tarjoaa laadukkaita ja monipuolisia Personal Trainer palveluita yksityisille ja yrityksille. "
+- content += "Tuusulan upea luonto antaa erinomaiset puitteet ulkoharjoittelulle. Lisäksi kunta ja sen yritykset tarjoavat monipuoliset harjoittelutilat. Esimerkiksi Tuusulan uimahalli on niin laadukas, että muiltakin paikkakunnilta asiakkaat saapuvat treenaamaan."
+- content += "Oheiseen karttaan olemme lisänneet muutamia paikkoja joissa asiakkaiden kanssa olemme treenanneet. "
+- content += "<br><br>Kannattaa lukea <a href='/#priima-valmennus'>etusivulta</a> toimintaperiaatteemme ja kuinka voimme auttaa sinua saavuttamaan taivoitteesi!"
+- var cityContent = partial("city", { "kmlUrl": kml, "city": city, "content": content })
 
-!= myContent
+!= cityContent

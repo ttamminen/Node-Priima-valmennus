@@ -3,4 +3,9 @@ layout: 'default'
 title: 'Vantaa - Personal Trainer palvelut'
 ---
 
-!= partial("city", { "kml": "", "city": "Vantaa", "content": "Blaa blaa" })
+- var kml = ""
+- var city = "Vantaa"
+- var content = ""
+- var cityContent = partial("city", { "kmlUrl": kml, "city": city, "content": content })
+
+!= cityContent

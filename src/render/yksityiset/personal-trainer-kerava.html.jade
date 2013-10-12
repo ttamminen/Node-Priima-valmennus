@@ -3,26 +3,12 @@ layout: 'default'
 title: 'Kerava - Personal Trainer palvelut'
 ---
 
-script(src="http://maps.googleapis.com/maps/api/js?sensor=false")
+- var kml = "https://maps.google.fi/maps/ms?authuser=0&vps=2&ie=UTF8&msa=0&output=kml&msid=214775384445131649957.0004df46b72846698499e"
+- var city = "Kerava"
+- var content = "Priima-valmennus tarjoaa laadukkaita ja monipuolisia Personal Trainer palveluita yksityisille ja yrityksille. "
+- content += "Kerava on Priima-valmennuksen kotipaikka. Liikuntamahdollisuudet ovat erinomaiset Keravalla, joten täällä saadaan helposti aikaiseksi monipuolinen harjoitteluohjelma. "
+- content += "Katso oheisesta kartasta esimerkkejä paikoista ja aktiviteeista. <a href='/#priima-valmennus'>Etusivullamme</a> on tarkemmin kuvattu palvelut ja toimintaperiaatteet."
 
-!= partial('tiles.html.jade', {})
+- var cityContent = partial("city", { "kmlUrl": kml, "city": city, "content": content })
 
-script.
-  // initializes Kerava specific map
-  kml = 'https://maps.google.fi/maps/ms?authuser=0&vps=2&ie=UTF8&msa=0&output=kml&msid=214775384445131649957.0004df46b72846698499e';
-
-section#priima-valmennus-kerava.page-content
-  header
-    h1 Priima-valmennus - Kerava
-
-  article.training-information-at-location
-    section
-      h4 Personal Trainer palvelut yksityisille
-      p
-        | Priima-valmennus tarjoaa laadukkaita ja monipuolisia Personal Trainer palveluita yksityisille ja yrityksille.
-        | Kerava on Priima-valmennuksen kotipaikka. Liikuntamahdollisuudet ovat erinomaiset Keravalla, joten täällä saadaan helposti aikaiseksi monipuolinen harjoitteluohjelma.
-        | Katso oheisesta kartasta esimerkkejä paikoista ja aktiviteeista.
-        | <a href="/#priima-valmennus">Etusivullamme</a> on tarkemmin kuvattu palvelut ja toimintaperiaatteet.
-  div.map
-    div#map-canvas
-    div#capture
+!= cityContent

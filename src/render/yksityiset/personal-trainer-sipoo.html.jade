@@ -3,4 +3,9 @@ layout: 'default'
 title: 'Sipoo - Personal Trainer palvelut'
 ---
 
-!= partial("city", { "kml": "", "city": "Sipoo", "content": "Blaa blaa" })
+- var kml = ""
+- var city = "Sipoo"
+- var content = ""
+- var cityContent = partial("city", { "kmlUrl": kml, "city": city, "content": content })
+
+!= cityContent

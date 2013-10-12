@@ -4,9 +4,13 @@ var Map = function () {
   map.initialize = function (sourceKml) {
     var map_canvas = document.getElementById('map-canvas');
     var map_options = {
-      center: new google.maps.LatLng(44.5403, -78.5463),
-      zoom: 8,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      zoom: 6,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      draggable: true,
+      scaleControl: false,
+      mapTypeControl: false,
+      panControl: true,
+      zoomControl: false
     }
     var mapObj = new google.maps.Map(map_canvas, map_options)
     loadKmlLayer(sourceKml, mapObj);

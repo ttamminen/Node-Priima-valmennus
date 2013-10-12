@@ -154,6 +154,16 @@
 	.highlight-testimonial-and-leave-feedback-wrapper {
 		@include span-columns(12, 12);
 	}
+
+	/* city specific pages */
+	.training-information-at-location {
+		@include span-columns(12, 12);
+	}
+
+	.map {
+		@include span-columns(12, 12);
+		@include remove-omega;
+	}
 }
 
 // tablet
@@ -250,6 +260,15 @@
 		.submit {
 			@include span-columns(12, 12);
 		}
+	}
+
+	.training-information-at-location {
+		@include span-columns(6, 12);
+	}
+
+	.map {
+		@include span-columns(12, 12);
+		@include remove-omega;
 	}
 }
 
@@ -349,5 +368,13 @@
 		.submit {
 			@include span-columns(2 omega, 12);
 		}
+	}
+
+	.training-information-at-location {
+		@include span-columns(6, 12);
+	}
+
+	.map {
+		@include span-columns(6 omega, 12);
 	}
 }
