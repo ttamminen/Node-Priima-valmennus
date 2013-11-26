@@ -3,4 +3,14 @@ layout: 'default'
 title: 'Järvenpää - Personal Trainer palvelut'
 ---
 
-!= partial("city", { "kml": "", "city": "Järvenpää", "content": "Blaa blaa" })
+- var kml = ""
+- var city = "Järvenpää"
+- var content = "Priima-valmennus tarjoaa laadukkaita ja monipuolisia Personal Trainer palveluita yksityisille ja yrityksille. "
+- content += ""
+- content += ""
+- content += ""
+- content += "<br><br>Kannattaa lukea <a href='/#priima-valmennus'>etusivulta</a> toimintaperiaatteemme ja kuinka voimme auttaa sinua saavuttamaan tavoitteesi!"
+
+- var cityContent = partial("city", { "kmlUrl": kml, "city": city, "content": content })
+
+!= cityContent
