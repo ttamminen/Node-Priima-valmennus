@@ -55,10 +55,12 @@ docpadConfig = {
       # Merge the document keywords with the site keywords
       @site.keywords.concat(@document.keywords or []).join(', ')
 
+  skipUnsupportedPlugins: false
+
   plugins:
     sass:
-      sassPath: 'C:/Ruby187/bin/sass.bat'
-      scssPath: 'C:/Ruby187/bin/scss.bat'
+      sassPath: 'C:/Ruby200-x64/bin/sass.bat'
+      scssPath: 'C:/Ruby200-x64/scss.bat'
       compass: 'true'
       requireLibraries: ['susy']
 
