@@ -60,32 +60,9 @@ docpadConfig = {
   plugins:
     sass:
       sassPath: 'C:/Ruby200-x64/bin/sass.bat'
-      scssPath: 'C:/Ruby200-x64/scss.bat'
+      scssPath: 'C:/Ruby200-x64/bin/scss.bat'
       compass: 'true'
       requireLibraries: ['susy']
-
-  # Here we can define handlers for events that DocPad fires
-  # You can find a full listing of events on the DocPad Wiki
-  events:
-    # Write After
-    # Used to minify our assets with grunt
-    writeAfter: (opts,next) ->
-    # Prepare
-      safeps = require('safeps')
-      pathUtil = require('path')
-      docpad = @docpad
-      rootPath = docpad.getConfig().rootPath
-      gruntPath = pathUtil.join(rootPath, 'node_modules', '.bin', 'grunt.cmd')
-
-      # Perform the grunt `min` task
-      # https://github.com/gruntjs/grunt/blob/0.3-stable/docs/task_min.md
-      command = [gruntPath]
-
-      # Execute
-      safeps.spawn(command, {cwd:rootPath,output:true}, next)
-
-      # Chain
-      @
 }
 
 # Export the DocPad Configuration
