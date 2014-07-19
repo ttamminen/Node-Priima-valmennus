@@ -1,0 +1,24 @@
+{
+	"uglify": {
+		"normal_javascript_assets": {
+			"files": {
+				"out/scripts/all.min.js": [
+					"out/vendor/jquery.js",
+					"out/vendor/validate.js",
+					"out/vendor/scrollTo.js",
+					"out/vendor/flexslider.js",
+					"out/vendor/localScroll.js",
+					"out/scripts/app.js",
+					"out/scripts/cryptography.js",
+					"out/scripts/main.js",
+					"out/scripts/map.js"
+				]
+			}
+		},
+		"modernizr": {
+			"files": {
+				"out/scripts/modernizr.min.js": ["out/vendor/modernizr.js"]
+			}
+		}
+	}
+}

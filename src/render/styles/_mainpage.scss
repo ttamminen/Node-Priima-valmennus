@@ -22,16 +22,23 @@ $marginBetweenTiles: 4px;
 		> li {
 			margin-bottom: 20px;
 		}
+
+		> li:last-child {
+			margin-bottom: 0;
+		}
 	}
 
 	h4.update-title {
 		margin: 0;
 	}
 
-	a {
+	.updates a {
 		@include adjust-font-size-to($socialMediaUpdateFontSize);
 		text-decoration: none;
 		color: $pmMediumGray2;
+		line-height: 1em;
+		overflow-y: hidden;
+		height: 1em;
 
 		&:hover {
 			color: lighten($pmMediumGray2, 20%);

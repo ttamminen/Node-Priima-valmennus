@@ -14,10 +14,16 @@
     "safeps": "~2.2.7",
     "bal-util": "~2.3.0",
     "underscore": "~1.5.2",
-    "docpad-plugin-partials": "~2.8.1"
+    "docpad-plugin-partials": "~2.8.1",
+    "docpad-plugin-grunt": "~2.1.1",
+    "grunt": "~0.4.2"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
     "start": "node_modules/docpad/bin/docpad-server"
+  },
+  "devDependencies": {
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-cli": "~0.1.13"
   }
 }

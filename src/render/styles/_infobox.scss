@@ -34,10 +34,6 @@
 		left: 37%;
 	}
 
-	&.right:after {
-		left: 70%;
-	}
-
 	.close-button {
 		@extend .icons-btn-close;
 		position: absolute;
